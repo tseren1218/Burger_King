@@ -6,6 +6,11 @@ html {
   --background-yellow: #fac450;
   --button-red: #ff0000;
   background-color: #fac450;
+  background-image: url(/images/bg_image.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  background-attachment: fixed;
 }
 
 body {
@@ -17,8 +22,8 @@ body {
 .background-oval {
   background-color: var(--default-brown);
   background: var(--default-brown);
-  margin-top: 200px;
-  padding-top: 200px;
+  margin: 0;
+  padding-top: 100px;
   padding-bottom: 150px;
   border-radius: 10000px / 4000px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -33,18 +38,20 @@ body {
   z-index: -10000;
   position: fixed;
   background-size: cover;
+  background-repeat: repeat-y;
 }
 
 .navbar-container {
   display: flex;
   position: fixed;
+  padding: 10px 30px;
+  height: 60px;
   z-index: 1000;
   flex-direction: row;
   justify-content: space-between;
   top: 0;
   right: 0;
   width: 100%;
-  padding: 10px 30px;
   align-items: center;
 }
 
@@ -68,19 +75,16 @@ nav ul li a:link {
   text-decoration: none;
 }
 
-.dropdown-icon {
-  height: 30px;
-  width: auto;
-}
-
 .logo {
-  height: 70px;
+  height: 75px;
   width: auto;
   position: absolute;
   left: calc(50% - 35px);
   transition-duration: 200ms;
-  margin-top: -40px;
-  padding-top: 0px;
+  margin-top: -35px;
+  padding: 5px 0px;
+  background-color: var(--default-white);
+  border-radius: 50%;
 }
 
 .logo:hover {
@@ -103,16 +107,80 @@ nav ul li a {
   transition-duration: 200ms;
 }
 
-nav ul li a:visited {
-  color: var(--default-white);
-}
-
 nav ul li a:hover {
   transform: scale(1.05);
 }
 
+nav ul li a:visited {
+  color: var(--default-white);
+}
+
+nav ul li ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul li ul.dropdown {
+  margin: 0;
+  top: 60px;
+  left: 460px;
+  background-color: var(--default-white);
+  font-size: 0.6em;
+  position: absolute;
+  z-index: 10000;
+  border-radius: 25px;
+  padding: 8px;
+  display: none;
+}
+
+ul li ul.dropdown li {
+  margin: 0px;
+  padding: 10px;
+  display: block;
+  color: var(--default-brown);
+  font-weight: 600;
+  z-index: 1000;
+  border-radius: 25px;
+}
+
+ul li ul.dropdown li:hover {
+  background-color: #ffe0b9;
+}
+
+ul li ul.dropdown li a:visited {
+  color: var(--default-brown);
+}
+
+.checkbtn {
+  font-size: 25px;
+  color: var(--default-white);
+  margin: 20px;
+  padding: 0;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.checkbtn:hover {
+  transform: scale(1.1);
+  transition: 0.1s;
+}
+
+#check {
+  display: none;
+  margin: 0;
+  padding: 0;
+}
+
+#check:checked ~ ul.dropdown {
+  display: block;
+}
+
+.hurgelt {
+  padding-right: 0;
+}
+
 .hurgelt-button {
-  margin-top: 0;
+  margin-right: 0;
   appearance: none;
   background-color: var(--button-red);
   border: 1px solid rgba(27, 31, 35, 0.15);
@@ -123,7 +191,7 @@ nav ul li a:hover {
   cursor: pointer;
   display: inline-block;
   line-height: 20px;
-  padding: 6px 16px;
+  padding: 8px 16px;
   position: relative;
   text-align: center;
   text-decoration: none;
@@ -135,20 +203,91 @@ nav ul li a:hover {
   transition-duration: 200ms;
 }
 
-#carousel {
-  overflow: hidden;
-}
-
-#carousel figure {
+.carousel-wrapper {
+  height: 500px;
   position: relative;
   width: 100%;
-  margin: 0;
-  padding: 0;
+  display: block;
+  margin: 180px 0 -140px 0;
 }
 
-#carousel figure img {
-  width: 33%;
-  float: left;
+.carousel-title {
+  z-index: 1000;
+}
+
+.carousel-item {
+  height: 450px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 25px, 50px;
+  opacity: 0;
+  transition: all 0.1s ease-in-out;
+}
+
+.arrow {
+  border: solid #5e1f13;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 15px;
+  margin: 30px;
+}
+
+.arrow-prev {
+  left: 30px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(135deg);
+}
+
+.arrow-next {
+  right: 30px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+[id^="item"] {
+  display: none;
+}
+
+.item-1 {
+  z-index: 2;
+  opacity: 1;
+  background: url(images/king_box.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.item-2 {
+  background: url(images/double_bacon_king.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.item-3 {
+  background: url(images/tender_grill.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+*:target ~ .item-1 {
+  opacity: 0;
+}
+
+#item-1:target ~ .item-1 {
+  opacity: 1;
+}
+
+#item-2:target ~ .item-2,
+#item-3:target ~ .item-3 {
+  z-index: 3;
+  opacity: 1;
 }
 
 .special-section-title {
@@ -165,15 +304,6 @@ nav ul li a:hover {
   align-content: space-evenly;
   align-items: center;
   gap: 25px;
-}
-
-@media (max-width: 800px) {
-  .special-container {
-    flex-direction: column;
-  }
-  .delivery-menu-container {
-    flex-direction: column;
-  }
 }
 
 .special-item {
@@ -205,6 +335,7 @@ nav ul li a:hover {
 .special-item-calories {
   font-size: 20px;
   margin: 12px;
+  opacity: 0.6;
 }
 
 article a {
@@ -285,4 +416,28 @@ footer a:visited {
 
 footer h3 {
   margin: 0;
+}
+
+/* @media (max-width: 800px) {
+  .special-container {
+    flex-direction: column;
+  }
+  .delivery-menu-container {
+    flex-direction: column;
+  }
+} */
+
+@media (max-width: 1200px) {
+  .special-container {
+    flex-direction: column;
+  }
+  .delivery-menu-container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 1000px) {
+  .navbar-container {
+    flex-direction: column;
+  }
 }
