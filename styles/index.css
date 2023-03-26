@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+.background-oval {
+    background-color: var(--default-brown);
+    background: var(--default-brown);
+    margin: 0;
+    padding-top: 100px;
+    padding-bottom: 150px;
+    border-radius: 10000px / 4000px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.carousel-wrapper {
+    height: 500px;
+    position: relative;
+    width: 100%;
+    display: block;
+    margin: 180px 0 -140px 0;
+}
+
+.carousel-title {
+    z-index: 1000;
+}
+
+.carousel-item {
+    height: 450px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 25px, 50px;
+    opacity: 0;
+    transition: all 0.1s ease-in-out;
+}
+
+.arrow {
+    border: solid #5e1f13;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 15px;
+    margin: 30px;
+}
+
+.arrow-prev {
+    left: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(135deg);
+}
+
+.arrow-next {
+    right: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+}
+
+[id^="item"] {
+    display: none;
+}
+
+.item-1 {
+    z-index: 2;
+    opacity: 1;
+    background: url(../images/king_box.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.item-2 {
+    background: url(../images/double_bacon_king.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.item-3 {
+    background: url(../images/tender_grill.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+*:target ~ .item-1 {
+    opacity: 0;
+}
+
+#item-1:target ~ .item-1 {
+    opacity: 1;
+}
+
+#item-2:target ~ .item-2,
+#item-3:target ~ .item-3 {
+    z-index: 3;
+    opacity: 1;
+}
+
+.special-section-title {
+    font-size: 48px;
+    text-align: center;
+    margin-top: 200px;
+    color: var(--default-white);
+}
+
+.special-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: space-evenly;
+    align-items: center;
+    gap: 25px;
+}
+
+.special-item {
+    text-align: center;
+    background-color: var(--default-white);
+    border-radius: 25px;
+    padding: 20px;
+    padding-bottom: 2px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition-duration: 100ms;
+}
+
+.special-item:hover {
+    transform: scale(1.05);
+    transition-duration: 100ms;
+}
+
+.special-img {
+    background-color: #fffeee;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+.special-item-title {
+    font-size: 35px;
+    margin: 0;
+}
+
+.special-item-calories {
+    font-size: 20px;
+    margin: 12px;
+    opacity: 0.6;
+}
+
+article a {
+    text-decoration: none;
+}
+
+article a:visited {
+    color: var(--default-brown);
+}
+
+.delivery-menu-container {
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    align-content: space-evenly;
+    align-items: center;
+    gap: 25px;
+}
+
+.big-button {
+    text-align: center;
+    background-color: var(--default-white);
+    border-radius: 25px;
+    padding: 10px 150px 40px 150px;
+    padding-bottom: 2px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition-duration: 200ms;
+}
+
+.big-button:hover {
+    transform: scale(1.05);
+    transition-duration: 200ms;
+}
+
+.delivery-menu-img {
+    margin: 0;
+}
+
+.delivery-menu-title {
+    margin: 0;
+    padding-bottom: 20px;
+    font-size: 40px;
+}
+
+@media (max-width: 1200px) {
+    .special-container {
+        flex-direction: column;
+    }
+    .delivery-menu-container {
+        flex-direction: column;
+    }
+}
