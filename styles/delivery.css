@@ -1,0 +1,104 @@
+html {
+    --default-brown: #5e1f13;
+    --default-white: #ffefdc;
+    --background-yellow: #fac450;
+    --button-red: #ff0000;
+    background-color: #fac450;
+    background-image: url(/images/bg_image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    background-attachment: fixed;
+}
+
+.page-header {
+    display: flex;
+    width: 100%;
+    height: 150px;
+    margin: 130px 0 50px 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--default-brown);
+}
+
+.page-title {
+    font-size: 3rem;
+    color: var(--default-white);
+    text-align: center;
+}
+
+.card {
+
+    display: flex;
+    flex-direction: column;
+    background-color: #FFF2E1;
+    color: #802000;
+    font-family: Nunito;
+    text-align: center;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 20%;
+}
+
+.card:hover {
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+transform: scale(1.02);
+}
+
+.card img {
+    width: auto;
+}
+
+.item-title {
+    margin-bottom: 10px;
+}
+
+.card h4 {
+    opacity: 0.5;
+}
+
+.item-calories {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.card section hr {
+    margin: 10px 25px;
+    width: auto;
+    height: 1px;
+    background-color: #5e1f13;
+    opacity: 0.5;
+}
+
+.price {
+    margin: 0 0 8px 0;
+    color: var(--button-red);
+    font-weight: 700;
+}
+
+.cart-button {
+    width: auto;
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding: 8px 60px;
+    display: inline-block;
+    border: 1px solid #5e1f13;
+    border-radius: 25px;
+    color: var(--default-brown)
+    font-size: 16px;
+    /* font-weight: 700; */
+    text-decoration: 0;
+    background-color: var(--default-white)
+    display: inline-block;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+.cart-button:hover {
+ 
+    background-color: #5e1f13;
+    color: var(--default-white);
+}
+
