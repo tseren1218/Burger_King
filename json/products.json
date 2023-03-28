@@ -1,0 +1,28 @@
+[
+    {
+        "name": "Дабл бекон кинг",
+        "category": "beef",
+        "calories": "500ккал",
+        "description": "2 давхар үхрийн мах, бяслаг, бекон",
+        "price": "27000₮",
+        "image": "../images/double_bacon_king.png"
+    },
+
+    {
+        "name": "Кинг бокс сет",
+        "category": "set",
+        "calories": "500ккал",
+        "description": "2 давхар үхрийн мах, бяслаг, бекон",
+        "price": "27000₮",
+        "image": "../images/king_box.png"
+    },
+
+    {
+        "name": "Тендер грилл сет",
+        "category": "chicken",
+        "calories": "500ккал",
+        "description": "2 давхар үхрийн мах, бяслаг, бекон",
+        "price": "27000₮",
+        "image": "../images/tender_grill.png"
+    }
+]

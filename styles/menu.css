@@ -71,3 +71,48 @@ a:link {
     font-size: 1.2rem;
     font-weight: 600;
 }
+
+#product-container {
+    margin: 0 10% 0 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2%;
+}
+
+.product-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--default-white);
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.product-image {
+    margin: 1em;
+}
+
+.product-title {
+    margin-top: 5%;
+    margin-bottom: 0;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--default-brown);
+}
+
+.product-calories {
+    margin: 5%;
+    font-weight: 600;
+    color: var(--default-brown);
+    opacity: 0.5;
+}
+
+.product-description {
+    margin: 5%;
+    font-weight: 600;
+    color: var(--default-brown);
+    display: none;
+}
