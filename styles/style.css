@@ -34,7 +34,7 @@ body {
 .navbar-container {
     display: flex;
     position: fixed;
-    padding: 10px 30px;
+    padding: 20px 30px;
     height: 50px;
     z-index: 1000;
     flex-direction: row;
@@ -44,6 +44,39 @@ body {
     right: 0;
     width: 100%;
     align-items: center;
+    transition-duration: 0.6s;
+}
+
+.sticky .navbar-container {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: var(--default-white);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition-duration: 0.6s;
+}
+
+.sticky .navbar-container a .logo {
+    background-color: var(--default-white);
+    transition-duration: 1s;
+}
+
+.sticky .navbar-container ul li a {
+    font-weight: 600;
+    color: var(--default-brown);
+}
+
+.sticky .navbar-container ul li {
+    font-weight: 600;
+    color: var(--default-brown);
+}
+
+.sticky .navbar-container ul li label i {
+    color: var(--default-brown);
+}
+
+.sticky .navbar-container ul li .hurgelt-button {
+    font-weight: 500;
+    color: var(--default-white);
 }
 
 nav ul {
@@ -75,10 +108,9 @@ nav ul li a:link {
     width: auto;
     position: absolute;
     left: calc(50% - 35px);
-    transition-duration: 200ms;
+    transition-duration: 0.4s;
     margin-top: -35px;
     padding: 5px 0px;
-    /* background-color: var(--default-white); */
     border-radius: 50%;
 }
 
@@ -103,7 +135,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
 
 nav ul li a:visited {
