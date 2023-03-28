@@ -1,0 +1,73 @@
+html {
+    --default-brown: #5e1f13;
+    --default-white: #ffefdc;
+    --responsive-default: #fff2e1;
+    --background-yellow: #fac450;
+    --button-red: #ff0000;
+    background-image: url(/images/bg_image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    background-attachment: fixed;
+}
+
+.page-header {
+    display: flex;
+    width: 100%;
+    margin: 130px 0 50px 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--default-brown);
+}
+
+.menu-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 30px;
+    grid-template-areas:
+        "title title title title title title"
+        "menu1 menu2 menu3 menu4 menu5 menu6";
+}
+
+.page-title {
+    margin-bottom: 0;
+    grid-area: title;
+    font-size: 3rem;
+    color: var(--default-white);
+    text-align: center;
+}
+
+.grid-item {
+    margin-bottom: 50px;
+    margin-top: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: var(--default-white);
+    justify-content: center;
+    border-radius: 25px;
+}
+
+.grid-item section img {
+    height: 100px;
+    width: auto;
+}
+
+.grid-item-title {
+    margin: 10px;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+.grid-item-title {
+    color: var(--default-brown);
+    font-size: 1.2rem;
+    font-weight: 600;
+}

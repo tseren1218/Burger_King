@@ -124,7 +124,7 @@
 }
 
 .special-item:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
     transition-duration: 100ms;
 }
 
@@ -173,7 +173,7 @@ article a:visited {
 }
 
 .big-button:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
     transition-duration: 200ms;
 }
 
@@ -187,11 +187,13 @@ article a:visited {
     font-size: 40px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 900px) {
     .special-container {
         flex-direction: column;
     }
     .delivery-menu-container {
         flex-direction: column;
+    }
+    .carousel-wrapper {
     }
 }

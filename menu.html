@@ -1,84 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-       <meta charset="UTF-8">
-       <meta http-equiv="X-UA-Compatible" content="IE=edge">
-       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <title>Document</title>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="styles/style.css">
+      <link rel="stylesheet" href="styles/menu.css">
+      <title>Меню</title>
 </head>
 
 
 <body>
       <header>
-            <nav class="navbar">
-              <ul class="navbar-left-items">
-                <li><a href="/menu.html">Меню</a></li>
-                <li><a href="">Салбар</a></li>
-                <li><a href="/delivery.html">Хүргэлт</a></li>
-              </ul>
-              <a href="/index.html"><img src="/images/logo.png" alt="logo" height="80"></a>
-              <ul class="navbar-right-items">
-                <li><a href="">Сагс</a></li>
-                <li><a href="">Хэл</a></li>
-              </ul>
+
+            <nav class="navbar-container">
+                  <ul class="navbar-left-items">
+                        <li><a href="/menu.html">Меню</a></li>
+                        <li><a href="/branches.html">Салбар</a></li>
+                        <li class="hurgelt"><a href="/delivery.html" class="hurgelt-button">Хүргэлт</a></li>
+                        <li class="more">
+                              <input type="checkbox" name="check" id="check">
+                              <label for="check" class="checkbtn">
+                                    <i class="fas fa-bars"></i>
+                              </label>
+                              <ul class="dropdown">
+                                    <li class="responsive-items"><a href="/index.html">Нүүр</a></li>
+                                    <li class="responsive-items"><a href="/menu.html">Меню</a></li>
+                                    <li class="responsive-items"><a href="/branches.html">Салбар</a></li>
+                                    <li class="responsive-items"><a href="/delivery.html"
+                                                class="hurgelt-button">Хүргэлт</a>
+                                    </li>
+                                    <li><a href="/about.html">Бидний тухай</a></li>
+                                    <li><a href="/contacts.html">Холбоо барих</a></li>
+                                    <li><a href="/terms.html">Үйлчилгээний нөхцөл</a></li>
+
+                              </ul>
+                        </li>
+                  </ul>
+                  <a href="/index.html"><img class="logo" src="/images/logo.png" alt="logo" height="80"></a>
+                  <ul class="navbar-right-items">
+                        <li>Сагс</li>
+                        <li>Хэл</li>
+                  </ul>
             </nav>
-       </header>
-      
-      <article class="menu">
-            <h1 class="menu-title">Меню</h1>
-            <a href="beef">
-                  <section class="beef">
-                        <img src="/images/beef.png" alt="beef burger" height="10%" width="10%"> 
-                        Үхрийн махтай
-                  </section>
-            </a>
-            <a href="chicken">
-                  <section class="chicken">
-                        <img src="/images/tahia.png" alt="chicken burger" height="10%" width="10%"> 
-                        Тахианы махтай
-                  </section>
-            </a>
-            <a href="bagts">
-                  <section class="bagts">
-                        <img src="/images/king_box.png" alt="bagts" height="10%" width="10%"> 
-                        Багц
-                  </section>
-            </a>
-            <a href="dan">
-                  <section class="dan">
-                        <img src="/images/double_bacon_king.png" alt="single burger" height="10%" width="10%"> 
-                        Дан
-                  </section>
-            </a>
-            <a href="hachir">
-                  <section class="hachir">
-                        <img src="/images/hachir.png" alt="Hachir" height="10%" width="10%"> 
-                        Хачир
-                  </section>
-            </a>
-            <a href="merch">
-                  <section class="merch">
-                        <img src="/images/merch.png" alt="merch" height="10%" width="10%"> 
-                        Үхрийн махтай
-                  </section>
-            </a>
+      </header>
+
+
+      <article class="page-header">
+            <article class="menu-container">
+                  <h1 class="page-title">Меню</h1>
+                  <a href="beef" class="grid-item">
+                        <section class="beef">
+                              <img src="/images/beef.png" alt="beef burger">
+                              <p class="grid-item-title">Үхрийн махтай</p>
+                        </section>
+                  </a>
+                  <a href="chicken" class="grid-item">
+                        <section class="chicken">
+                              <img src="/images/tahia.png" alt="chicken burger">
+                              <p class="grid-item-title">Үхрийн махтай</p>
+                        </section>
+                  </a>
+                  <a href="bagts" class="grid-item">
+                        <section class="bagts">
+                              <img src="/images/king_box.png" alt="bagts">
+                              <p class="grid-item-title">Үхрийн махтай</p>
+                        </section>
+                  </a>
+                  <a href="dan" class="grid-item">
+                        <section class="dan">
+                              <img src="/images/double_bacon_king.png" alt="single burger">
+                              <p class="grid-item-title">Үхрийн махтай</p>
+                        </section>
+                  </a>
+                  <a href="hachir" class="grid-item">
+                        <section class="hachir">
+                              <img src="/images/hachir.png" alt="Hachir">
+                              <p class="grid-item-title">Үхрийн махтай</p>
+                        </section>
+                  </a>
+                  <a href="merch" class="grid-item">
+                        <section class="merch">
+                              <img src="/images/merch.png" alt="merch">
+                              <p class="grid-item-title">Үхрийн махтай</p>
+                        </section>
+                  </a>
+            </article>
       </article>
 
-      
+
+
+
       <footer>
-            <a href="tel:+97677773030"><img src="/images/call_icon.png" alt="tel"></a>
-      <a href="https://www.youtube.com/@BurgerKingMN" target="_blank"><img src="/images/youtube_icon.png" alt="youtube"></a>
-            <a href="https://www.facebook.com/burgerkinginmongolia" target="_blank"><img src="/images/facebook_icon.png" alt="facebook"></a>
-            <a href="https://www.instagram.com/burgerkingmongolia/" target="_blank"><img src="images/instagram_icon.png" alt="instagram"></a>
-      
-            <h2 class="footer-title">&#169; 2023 Burger King</h2>
-            
-            <h3 class="footer-h3">BKC INFO</h3>
-            <ul class="bkc-info"> 
-            <li><a href="/about.html">About BK</a></li>
-            <li><a href="/contacts.html">Холбоо барих</a></li>
-            </ul>
-      
+            <section class="footer-left-items">
+                  <section class="footer-icons">
+                        <a href="tel:+97677773030"><img src="/images/call_icon.png" alt="tel"></a>
+                        <a href="https://www.youtube.com/@BurgerKingMN" target="_blank"><img
+                                    src="/images/youtube_icon.png" alt="youtube"></a>
+                        <a href="https://www.facebook.com/burgerkinginmongolia" target="_blank"><img
+                                    src="/images/facebook_icon.png" alt="facebook"></a>
+                        <a href="https://www.instagram.com/burgerkingmongolia/" target="_blank"><img
+                                    src="images/instagram_icon.png" alt="instagram"></a>
+                  </section>
+
+
+                  <h2 class="footer-title">&#169; 2023 Burger King</h2>
+
+            </section>
+
+            <section class="footer-right-items">
+                  <h3 class="footer-h3">BKC INFO</h3>
+                  <ul class="bkc-info">
+                        <li><a href="/about.html">About BK</a></li>
+                        <li><a href="/contacts.html">Холбоо барих</a></li>
+                  </ul>
+            </section>
       </footer>
 </body>
+
 </html>

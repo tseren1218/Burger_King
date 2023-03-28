@@ -3,9 +3,9 @@
 html {
     --default-brown: #5e1f13;
     --default-white: #ffefdc;
+    --responsive-default: #fff2e1;
     --background-yellow: #fac450;
     --button-red: #ff0000;
-    background-color: #fac450;
     background-image: url(/images/bg_image.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -35,9 +35,10 @@ body {
     display: flex;
     position: fixed;
     padding: 10px 30px;
-    height: 60px;
+    height: 50px;
     z-index: 1000;
     flex-direction: row;
+    min-width: 0;
     justify-content: space-between;
     top: 0;
     right: 0;
@@ -65,6 +66,10 @@ nav ul li a:link {
     text-decoration: none;
 }
 
+.responsive-items {
+    display: none;
+}
+
 .logo {
     height: 75px;
     width: auto;
@@ -73,7 +78,7 @@ nav ul li a:link {
     transition-duration: 200ms;
     margin-top: -35px;
     padding: 5px 0px;
-    background-color: var(--default-white);
+    /* background-color: var(--default-white); */
     border-radius: 50%;
 }
 
@@ -165,6 +170,10 @@ ul li ul.dropdown li a:visited {
     display: block;
 }
 
+#check:checked ~ ul.dropdown .responsive-items {
+    display: none;
+}
+
 .hurgelt {
     padding-right: 0;
 }
@@ -231,8 +240,57 @@ footer h3 {
     margin: 0;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 500px) {
+    html {
+        background-image: none;
+        background-color: var(--responsive-default);
+    }
+
     .navbar-container {
-        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        height: 70px;
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: var(--default-brown);
+    }
+
+    .navbar-left-items {
+        margin: 0;
+        padding: 0;
+    }
+
+    .navbar-right-items {
+        display: none;
+    }
+
+    .navbar-container ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    .navbar-container ul li {
+        color: var(--default-brown);
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .hurgelt {
+        padding: 10px 20px 10px 20px;
+    }
+
+    .hurgelt-button {
+        all: unset;
+        cursor: pointer;
+    }
+
+    .more {
+        display: flex;
+        margin: 0;
+        padding: 10px 20px 10px 20px;
     }
 }
