@@ -1,17 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
 
-html {
+/* html {
     --default-brown: #5e1f13;
     --default-white: #ffefdc;
     --background-yellow: #fac450;
     --button-red: #ff0000;
-    background-color: #fac450;
     background-image: url(/images/bg_image.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position-x: center;
     background-attachment: fixed;
-}
+} */
 
 .page-header {
     display: flex;

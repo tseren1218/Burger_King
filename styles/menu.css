@@ -1,16 +1,3 @@
-html {
-    --default-brown: #5e1f13;
-    --default-white: #ffefdc;
-    --responsive-default: #fff2e1;
-    --background-yellow: #fac450;
-    --button-red: #ff0000;
-    background-image: url(/images/bg_image.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-x: center;
-    background-attachment: fixed;
-}
-
 .page-header {
     display: flex;
     width: 100%;
