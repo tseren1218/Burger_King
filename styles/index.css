@@ -195,5 +195,32 @@ article a:visited {
         flex-direction: column;
     }
     .carousel-wrapper {
+        margin-top: 40%;
+    }
+
+    .arrow-next.arrow,
+    .arrow-prev.arrow {
+        margin: 0;
+    }
+
+    .carousel-wrapper .item-1,
+    .item-2,
+    .item-3 {
+        height: 50%;
+    }
+
+    .background-oval {
+        background-color: var(--responsive-default);
+        box-shadow: none;
+        padding: 2%;
+        margin: 0;
+    }
+
+    .special-section-title {
+        margin: 0;
+        padding: 0;
+        padding-top: 0;
+        font-size: 1.5rem;
+        color: var(--default-brown);
     }
 }

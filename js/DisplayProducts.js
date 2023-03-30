@@ -16,5 +16,3 @@ function productTemplate(product) {
 document.getElementById("product-container").innerHTML += `
     ${products.map(productTemplate).join("")}
 `;
-
-console.log(products.name);

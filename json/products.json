@@ -24,5 +24,14 @@
         "description": "2 давхар үхрийн мах, бяслаг, бекон",
         "price": "27000₮",
         "image": "../images/tender_grill.png"
+    },
+
+    {
+        "name": "Халапено воппер сет",
+        "category": "beef",
+        "calories": "500ккал",
+        "description": "Үхрийн мах, ногоо",
+        "price": "27000₮",
+        "image": "../images/halapeno_whopper_set.png"
     }
 ]

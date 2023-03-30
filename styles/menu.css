@@ -78,7 +78,9 @@ a:link {
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 2%;
+    align-items: center;
+    gap: 1.5rem;
+    row-gap: 1.5rem;
 }
 
 .product-item {
