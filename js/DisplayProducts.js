@@ -1,4 +1,4 @@
-import products from "/json/products.json" assert { type: "json" };
+import products from "./json/products.json" assert { type: "json" };
 
 function productTemplate(product) {
     return `
