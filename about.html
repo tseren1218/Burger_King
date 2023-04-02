@@ -5,13 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Burger King Mongolia" />
-    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="styles/about.css" />
     <script
       src="https://kit.fontawesome.com/ea59dd7bdf.js"
       crossorigin="anonymous"
     ></script>
-
     <title>Салбар</title>
   </head>
 
@@ -20,32 +19,48 @@
       <header>
         <nav class="navbar-container">
           <ul class="navbar-left-items">
-            <li><a href="/menu.html">Меню</a></li>
-            <li><a href="/branches.html">Салбар</a></li>
+            <li><a href="./menu.html">Меню</a></li>
+            <li><a href="./branches.html">Салбар</a></li>
             <li class="hurgelt">
-              <a href="/delivery.html" class="hurgelt-button">Хүргэлт</a>
+              <a href="./delivery.html" class="hurgelt-button">Хүргэлт</a>
             </li>
-            <li>
+            <li class="more">
               <input type="checkbox" name="check" id="check" />
               <label for="check" class="checkbtn">
                 <i class="fas fa-bars"></i>
               </label>
               <ul class="dropdown">
-                <li><a href="/about.html">Бидний тухай</a></li>
-                <li><a href="/contacts.html">Холбоо барих</a></li>
-                <li><a href="/terms.html">Үйлчилгээний нөхцөл</a></li>
+                <li class="responsive-items">
+                  <a href="./index.html">Нүүр</a>
+                </li>
+                <li class="responsive-items"><a href="./menu.html">Меню</a></li>
+                <li class="responsive-items">
+                  <a href="./branches.html">Салбар</a>
+                </li>
+                <li class="responsive-items">
+                  <a href="./delivery.html" class="hurgelt-button">Хүргэлт</a>
+                </li>
+                <li><a href="./about.html">Бидний тухай</a></li>
+                <li><a href="./contacts.html">Холбоо барих</a></li>
+                <li><a href="./terms.html">Үйлчилгээний нөхцөл</a></li>
               </ul>
             </li>
           </ul>
-          <a href="/index.html"
-            ><img class="logo" src="/images/logo.png" alt="logo" height="80"
+          <a href="./index.html"
+            ><img class="logo" src="./images/logo.png" alt="logo" height="80"
           /></a>
           <ul class="navbar-right-items">
             <li>Сагс</li>
             <li>Хэл</li>
           </ul>
         </nav>
-      </header>
+        
+        <script type="text/javascript">
+          window.addEventListener("scroll", function () {
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 100);
+          })
+        </script>
 
       <article class="page-header">
         <h1 class="page-title">Бидний тухай</h1>
@@ -93,7 +108,7 @@
 
         <section class="terms-area">
           <h2 class="terms-title">Хүргэлтийн нөхцөл</h2>
-          <p>
+          <p class="about-text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -143,6 +158,13 @@
           </ul>
         </section>
       </footer>
+
+      <script type="text/javascript">
+        window.addEventListener("scroll", function () {
+          var header = document.querySelector("header");
+          header.classList.toggle("sticky", window.scrollY > 100);
+        });
+      </script>
     </div>
   </body>
 </html>

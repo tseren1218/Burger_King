@@ -3,9 +3,9 @@
 html {
   --default-brown: #5e1f13;
   --default-white: #ffefdc;
+  --responsive-default: #fff2e1;
   --background-yellow: #fac450;
   --button-red: #ff0000;
-  background-color: #fac450;
   background-image: url(/images/bg_image.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -14,19 +14,10 @@ html {
 }
 
 body {
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
   margin: 0;
   padding: 0;
   font-family: Nunito;
 }
-/* .jishee_centered {
-  width: 1400px;
-  margin: 0;
-  padding: 0;
-  font-family: Nunito;
-} */
 
 .bg-image {
   top: 0;
@@ -43,15 +34,49 @@ body {
 .navbar-container {
   display: flex;
   position: fixed;
-  padding: 10px 30px;
-  height: 60px;
+  padding: 20px 30px;
+  height: 50px;
   z-index: 1000;
   flex-direction: row;
+  min-width: 0;
   justify-content: space-between;
   top: 0;
   right: 0;
   width: 100%;
   align-items: center;
+  transition-duration: 0.6s;
+}
+
+.sticky .navbar-container {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: var(--default-white);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition-duration: 0.6s;
+}
+
+.sticky .navbar-container a .logo {
+  background-color: var(--default-white);
+  transition-duration: 1s;
+}
+
+.sticky .navbar-container ul li a {
+  font-weight: 600;
+  color: var(--default-brown);
+}
+
+.sticky .navbar-container ul li {
+  font-weight: 600;
+  color: var(--default-brown);
+}
+
+.sticky .navbar-container ul li label i {
+  color: var(--default-brown);
+}
+
+.sticky .navbar-container ul li .hurgelt-button {
+  font-weight: 500;
+  color: var(--default-white);
 }
 
 nav ul {
@@ -74,15 +99,18 @@ nav ul li a:link {
   text-decoration: none;
 }
 
+.responsive-items {
+  display: none;
+}
+
 .logo {
   height: 75px;
   width: auto;
   position: absolute;
   left: calc(50% - 35px);
-  transition-duration: 200ms;
+  transition-duration: 0.4s;
   margin-top: -35px;
   padding: 5px 0px;
-  background-color: var(--default-white);
   border-radius: 50%;
 }
 
@@ -107,7 +135,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
 nav ul li a:visited {
@@ -174,6 +202,10 @@ ul li ul.dropdown li a:visited {
   display: block;
 }
 
+#check:checked ~ ul.dropdown .responsive-items {
+  display: none;
+}
+
 .hurgelt {
   padding-right: 0;
 }
@@ -205,15 +237,12 @@ ul li ul.dropdown li a:visited {
 footer {
   display: flex;
   padding: 20px 80px 8px 80px;
-  /* margin-top: 100px; */
-  margin-bottom: 0px;
   margin-top: 100px;
+  margin-bottom: 0px;
   background-color: var(--default-brown);
   justify-content: space-between;
   color: var(--default-white);
   text-decoration: none;
-
-  flex-shrink: 0;
 }
 
 footer a {
@@ -243,8 +272,57 @@ footer h3 {
   margin: 0;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 500px) {
+  html {
+    background-image: none;
+    background-color: var(--responsive-default);
+  }
+
   .navbar-container {
-    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    height: 70px;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--default-brown);
+  }
+
+  .navbar-left-items {
+    margin: 0;
+    padding: 0;
+  }
+
+  .navbar-right-items {
+    display: none;
+  }
+
+  .navbar-container ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  .navbar-container ul li {
+    color: var(--default-brown);
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .hurgelt {
+    padding: 10px 20px 10px 20px;
+  }
+
+  .hurgelt-button {
+    all: unset;
+    cursor: pointer;
+  }
+
+  .more {
+    display: flex;
+    margin: 0;
+    padding: 10px 20px 10px 20px;
   }
 }
