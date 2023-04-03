@@ -63,21 +63,21 @@
 .item-1 {
     z-index: 2;
     opacity: 1;
-    background: url(../images/king_box.png);
+    background: url(../images/home1.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .item-2 {
-    background: url(../images/double_bacon_king.png);
+    background: url(../images/home2.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .item-3 {
-    background: url(../images/tender_grill.png);
+    background: url(../images/home3.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
