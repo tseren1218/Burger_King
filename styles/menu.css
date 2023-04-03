@@ -34,6 +34,7 @@
     flex-wrap: wrap;
     background-color: var(--default-white);
     justify-content: center;
+    text-align: center;
     border-radius: 25px;
 }
 
@@ -60,14 +61,19 @@ a:link {
 }
 
 #product-container {
-    margin: 0 10% 0 10%;
+    /* margin: 0 10% 0 10%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
     gap: 1.5rem;
-    row-gap: 1.5rem;
+    row-gap: 1.5rem; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 3%;
+    padding-left: 15%;
+    padding-right: 15%;
 }
 
 .product-item {
@@ -81,6 +87,7 @@ a:link {
 }
 
 .product-image {
+    object-fit: contain;
     margin: 1em;
 }
 
