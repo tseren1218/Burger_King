@@ -11,6 +11,11 @@
   align-items: center;
   background-color: var(--default-brown);
 }
+.page-title {
+  font-size: 3rem;
+  color: var(--default-white);
+  text-align: center;
+}
 
 .about-container {
   display: grid;
