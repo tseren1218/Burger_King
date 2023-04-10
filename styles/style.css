@@ -363,6 +363,14 @@ footer h3 {
     display: block;
   }
 
+  .dropdown li a {
+    color: var(--default-brown);
+  }
+
+  .dropdown li a:visited {
+    color: var(--default-brown);
+  }
+
   .hurgelt-button {
     margin-right: 0;
     appearance: none;
@@ -382,7 +390,10 @@ footer h3 {
     vertical-align: middle;
   }
   .hurgelt-button:hover {
-    background-color: #ddd;
     transition-duration: 10sms;
+  }
+
+  .hurgelt-button a {
+    all: none;
   }
 }

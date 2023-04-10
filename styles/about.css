@@ -19,7 +19,7 @@
 
 .about-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: auto auto;
   grid-row-gap: 60px;
   justify-content: space-evenly;
   align-items: center;
@@ -32,7 +32,7 @@
 .terms-area {
   grid-column: 1 / 2;
   vertical-align: middle;
-  width: 50%;
+  width: 70%;
 }
 
 .about-text {
