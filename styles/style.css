@@ -272,7 +272,7 @@ footer h3 {
     margin: 0;
 }
 
-@media screen and (max-width: 500px) {
+/* @media screen and (max-width: 500px) {
     html {
         background-image: none;
         background-color: var(--responsive-default);
@@ -330,16 +330,23 @@ footer h3 {
         cursor: pointer;
     }
 
-    /* .more {
-        display: flex;
-        margin: 0;
-        padding: 10px 20px 10px 20px;
-    } */
-
     .sticky {
         all: unset;
     }
 
     .logo {
+    }
+} */
+
+@media (max-width: 900px) {
+    nav ul li {
+        display: none;
+    }
+    .logo {
+        height: 75px;
+        width: auto;
+    }
+    nav ul li .checkbtn {
+        display: block;
     }
 }

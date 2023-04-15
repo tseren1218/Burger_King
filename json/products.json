@@ -5,7 +5,7 @@
         "calories": "500ккал",
         "description": "2 давхар үхрийн мах, бяслаг, бекон",
         "price": "27000₮",
-        "image": "./images/double_bacon_king.png"
+        "image": "../images/double_bacon_king.png"
     },
 
     {
@@ -14,7 +14,7 @@
         "calories": "500ккал",
         "description": "2 давхар үхрийн мах, бяслаг, бекон",
         "price": "27000₮",
-        "image": "./images/king_box.png"
+        "image": "../images/king_box.png"
     },
 
     {
@@ -23,7 +23,7 @@
         "calories": "500ккал",
         "description": "2 давхар үхрийн мах, бяслаг, бекон",
         "price": "27000₮",
-        "image": "./images/tender_grill.png"
+        "image": "../images/tender_grill.png"
     },
 
     {
@@ -32,6 +32,24 @@
         "calories": "500ккал",
         "description": "Үхрийн мах, ногоо",
         "price": "27000₮",
-        "image": "./images/halapeno_whopper_set.png"
+        "image": "../images/halapeno_whopper_set.png"
+    },
+
+    {
+        "name": "Снек бакет",
+        "category": "hachir",
+        "calories": "500ккал",
+        "description": "Чикен Наггетс -15ш, Чикен Фрайс - 15ш, Онион Рингс - 8ш, шарсан төмс бүхий, кетчуптэй багц ",
+        "price": "36000₮",
+        "image": "../images/snack_bucket.png"
+    },
+
+    {
+        "name": "Лонг чикен сет",
+        "category": "chicken",
+        "calories": "500ккал",
+        "description": "Шарсан тахианы мах, гүнжидийн үртэй шинэхэн талхтай бургер, Шарсан төмс /дунд/, ундаа /дунд/",
+        "price": "10900₮",
+        "image": "../images/long_chicken_set.png"
     }
 ]
