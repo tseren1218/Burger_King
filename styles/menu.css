@@ -1,0 +1,114 @@
+.page-header {
+    display: flex;
+    width: 100%;
+    margin: 130px 0 50px 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--default-brown);
+}
+
+.menu-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 30px;
+    grid-template-areas:
+        "title title title title title title"
+        "menu1 menu2 menu3 menu4 menu5 menu6";
+}
+
+.page-title {
+    margin-bottom: 0;
+    grid-area: title;
+    font-size: 3rem;
+    color: var(--default-white);
+    text-align: center;
+}
+
+.grid-item {
+    margin-bottom: 50px;
+    margin-top: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: var(--default-white);
+    justify-content: center;
+    text-align: center;
+    border-radius: 25px;
+}
+
+.grid-item section img {
+    height: 100px;
+    width: auto;
+}
+
+.grid-item-title {
+    margin: 10px;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+.grid-item-title {
+    color: var(--default-brown);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+#product-container {
+    /* margin: 0 10% 0 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.5rem;
+    row-gap: 1.5rem; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 3%;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.product-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--default-white);
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.product-image {
+    object-fit: contain;
+    margin: 1em;
+}
+
+.product-title {
+    margin-top: 5%;
+    margin-bottom: 0;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--default-brown);
+}
+
+.product-calories {
+    margin: 5%;
+    font-weight: 600;
+    color: var(--default-brown);
+    opacity: 0.5;
+}
+
+.product-description {
+    margin: 5%;
+    font-weight: 600;
+    color: var(--default-brown);
+    display: none;
+}
