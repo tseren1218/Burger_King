@@ -1,275 +1,275 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
 
 html {
-    --default-brown: #5e1f13;
-    --default-white: #ffefdc;
-    --responsive-default: #fff2e1;
-    --background-yellow: #fac450;
-    --button-red: #ff0000;
-    background-image: url(../images/bg_image.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-x: center;
-    background-attachment: fixed;
+  --default-brown: #5e1f13;
+  --default-white: #ffefdc;
+  --responsive-default: #fff2e1;
+  --background-yellow: #fac450;
+  --button-red: #ff0000;
+  background-image: url(../images/bg_image.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  background-attachment: fixed;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Nunito;
+  margin: 0;
+  padding: 0;
+  font-family: Nunito;
 }
 
 .bg-image {
-    top: 0;
-    left: 0;
-    opacity: 0.7;
-    width: 100%;
-    height: auto;
-    z-index: -10000;
-    position: fixed;
-    background-size: cover;
-    background-repeat: repeat-y;
+  top: 0;
+  left: 0;
+  opacity: 0.7;
+  width: 100%;
+  height: auto;
+  z-index: -10000;
+  position: fixed;
+  background-size: cover;
+  background-repeat: repeat-y;
 }
 
 .navbar-container {
-    display: flex;
-    position: fixed;
-    padding: 20px 30px;
-    height: 50px;
-    z-index: 1000;
-    flex-direction: row;
-    min-width: 0;
-    justify-content: space-between;
-    top: 0;
-    right: 0;
-    width: 100%;
-    align-items: center;
-    transition-duration: 0.6s;
+  display: flex;
+  position: fixed;
+  padding: 20px 30px;
+  height: 50px;
+  z-index: 1000;
+  flex-direction: row;
+  min-width: 0;
+  justify-content: space-between;
+  top: 0;
+  right: 0;
+  width: 100%;
+  align-items: center;
+  transition-duration: 0.6s;
 }
 
 .sticky .navbar-container {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    background-color: var(--default-white);
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    transition-duration: 0.6s;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: var(--default-white);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition-duration: 0.6s;
 }
 
 .sticky .navbar-container a .logo {
-    background-color: var(--default-white);
-    transition-duration: 1s;
+  background-color: var(--default-white);
+  transition-duration: 1s;
 }
 
 .sticky .navbar-container ul li a {
-    font-weight: 500;
-    color: var(--default-brown);
+  font-weight: 500;
+  color: var(--default-brown);
 }
 
 .sticky .navbar-container ul li {
-    font-weight: 500;
-    color: var(--default-brown);
+  font-weight: 500;
+  color: var(--default-brown);
 }
 
 .sticky .navbar-container ul li label i {
-    color: var(--default-brown);
+  color: var(--default-brown);
 }
 
 .sticky .navbar-container ul li .hurgelt-button {
-    font-weight: 500;
-    color: var(--default-white);
+  font-weight: 500;
+  color: var(--default-white);
 }
 
 nav ul {
-    text-decoration: none;
-    list-style: none;
+  text-decoration: none;
+  list-style: none;
 }
 
 nav ul li {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    color: var(--default-white);
-    font-size: 130%;
-    font-weight: 500;
-    padding: 10px 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: var(--default-white);
+  font-size: 130%;
+  font-weight: 500;
+  padding: 10px 20px;
 }
 
 nav ul li a:link {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .responsive-items {
-    display: none;
+  display: none;
 }
 
 .logo {
-    height: 75px;
-    width: auto;
-    position: absolute;
-    left: calc(50% - 35px);
-    transition-duration: 0.4s;
-    margin-top: -35px;
-    padding: 5px 0px;
-    border-radius: 50%;
+  height: 75px;
+  width: auto;
+  position: absolute;
+  left: calc(50% - 35px);
+  transition-duration: 0.4s;
+  margin-top: -35px;
+  padding: 5px 0px;
+  border-radius: 50%;
 }
 
 .logo:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .navbar-left-items {
-    margin-left: 10px;
-    display: flex;
-    float: left;
+  margin-left: 10px;
+  display: flex;
+  float: left;
 }
 
 .navbar-right-items {
-    margin-right: 10px;
-    display: flex;
-    float: left;
+  margin-right: 10px;
+  display: flex;
+  float: left;
 }
 
 nav ul li a {
-    transition-duration: 200ms;
+  transition-duration: 200ms;
 }
 
 nav ul li a:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 nav ul li a:visited {
-    color: var(--default-white);
+  color: var(--default-white);
 }
 
 nav ul li ul {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 ul li ul.dropdown {
-    margin: 0;
-    top: 60px;
-    left: 460px;
-    background-color: var(--default-white);
-    font-size: 0.6em;
-    position: absolute;
-    z-index: 10000;
-    border-radius: 25px;
-    padding: 8px;
-    display: none;
+  margin: 0;
+  top: 60px;
+  left: 460px;
+  background-color: var(--default-white);
+  font-size: 0.6em;
+  position: absolute;
+  z-index: 10000;
+  border-radius: 25px;
+  padding: 8px;
+  display: none;
 }
 
 ul li ul.dropdown li {
-    margin: 0px;
-    padding: 10px;
-    display: block;
-    color: var(--default-brown);
-    font-weight: 600;
-    z-index: 1000;
-    border-radius: 25px;
+  margin: 0px;
+  padding: 10px;
+  display: block;
+  color: var(--default-brown);
+  font-weight: 600;
+  z-index: 1000;
+  border-radius: 25px;
 }
 
 ul li ul.dropdown li:hover {
-    background-color: #ffe0b9;
+  background-color: #ffe0b9;
 }
 
 ul li ul.dropdown li a:visited {
-    color: var(--default-brown);
+  color: var(--default-brown);
 }
 
 .checkbtn {
-    font-size: 25px;
-    color: var(--default-white);
-    margin: 20px;
-    padding: 0;
-    cursor: pointer;
-    transition: 0.1s;
+  font-size: 25px;
+  color: var(--default-white);
+  margin: 20px;
+  padding: 0;
+  cursor: pointer;
+  transition: 0.1s;
 }
 
 .checkbtn:hover {
-    transform: scale(1.1);
-    transition: 0.1s;
+  transform: scale(1.1);
+  transition: 0.1s;
 }
 
 #check {
-    display: none;
-    margin: 0;
-    padding: 0;
+  display: none;
+  margin: 0;
+  padding: 0;
 }
 
 #check:checked ~ ul.dropdown {
-    display: block;
+  display: block;
 }
 
 #check:checked ~ ul.dropdown .responsive-items {
-    display: none;
+  display: none;
 }
 
 .hurgelt {
-    padding-right: 0;
+  padding-right: 0;
 }
 
 .hurgelt-button {
-    margin-right: 0;
-    appearance: none;
-    background-color: var(--button-red);
-    border: 1px solid rgba(27, 31, 35, 0.15);
-    border-radius: 25px;
-    box-shadow: rgba(27, 31, 35, 0.1) 0 1px 0;
-    box-sizing: border-box;
-    color: var(--default-white);
-    cursor: pointer;
-    display: inline-block;
-    line-height: 20px;
-    padding: 8px 16px;
-    position: relative;
-    text-align: center;
-    text-decoration: none;
-    vertical-align: middle;
+  margin-right: 0;
+  appearance: none;
+  background-color: var(--button-red);
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  border-radius: 25px;
+  box-shadow: rgba(27, 31, 35, 0.1) 0 1px 0;
+  box-sizing: border-box;
+  color: var(--default-white);
+  cursor: pointer;
+  display: inline-block;
+  line-height: 20px;
+  padding: 8px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
 }
 
 .hurgelt-button:hover {
-    background-color: #5e1f13;
-    transition-duration: 200ms;
+  background-color: #5e1f13;
+  transition-duration: 200ms;
 }
 
 footer {
-    display: flex;
-    padding: 20px 80px 8px 80px;
-    margin-top: 100px;
-    margin-bottom: 0px;
-    background-color: var(--default-brown);
-    justify-content: space-between;
-    color: var(--default-white);
-    text-decoration: none;
+  display: flex;
+  padding: 20px 80px 8px 80px;
+  margin-top: 100px;
+  margin-bottom: 0px;
+  background-color: var(--default-brown);
+  justify-content: space-between;
+  color: var(--default-white);
+  text-decoration: none;
 }
 
 footer a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 footer a:visited {
-    color: var(--default-white);
+  color: var(--default-white);
 }
 
 .footer-left-items {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .footer-right-items {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .footer-icons a {
-    margin-right: 20px;
+  margin-right: 20px;
 }
 
 footer h3 {
-    margin: 0;
+  margin: 0;
 }
 
 /* @media screen and (max-width: 500px) {
@@ -339,14 +339,50 @@ footer h3 {
 } */
 
 @media (max-width: 900px) {
-    nav ul li {
-        display: none;
-    }
-    .logo {
-        height: 75px;
-        width: auto;
-    }
-    nav ul li .checkbtn {
-        display: block;
-    }
+  nav ul .menu,
+  .branch,
+  .hurgelt {
+    display: none;
+  }
+  .logo {
+    height: 75px;
+    width: auto;
+  }
+  nav ul li .checkbtn {
+    display: block;
+  }
+
+  ul li ul.dropdown {
+    left: 120px;
+  }
+  #check:checked ~ ul.dropdown {
+    display: block;
+  }
+
+  #check:checked ~ ul.dropdown .responsive-items {
+    display: block;
+  }
+
+  .hurgelt-button {
+    margin-right: 0;
+    appearance: none;
+    background-color: var(--responsive-default);
+    border: 0px;
+    border-radius: 0px;
+    box-shadow: 0px 0;
+    box-sizing: border-box;
+    color: var(--default-brown);
+    cursor: pointer;
+    display: inline-block;
+    line-height: 15px;
+    padding: 0px 0px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+  }
+  .hurgelt-button:hover {
+    background-color: #ddd;
+    transition-duration: 10sms;
+  }
 }
