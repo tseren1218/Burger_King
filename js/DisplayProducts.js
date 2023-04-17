@@ -1,18 +1,22 @@
-import products from "../json/products.json" assert { type: "json" };
+fetch("https://api.jsonbin.io/v3/b/643c9532ace6f33a220ca072")
+    .then((product) => {
+        return product.json();
+    })
+    .then((product) => {
+        let result = "";
 
-function productTemplate(product) {
-    return `
-    
-            <article class="product-item">
-                  <img class="product-image" src="${product.image}" alt="${product.name}" height="200">
-                  <h2 class="product-title">${product.name}</h2>
-                  <h4 class="product-calories">${product.calories}</h4>
-                  <h4 class="product-description">${product.description}</h4>
-            </article>
+        product.record.forEach(
+            (data) =>
+                (result += `<article class="product-item">
+                  <img class="product-image" src="${data.name}" alt="${data.name}" height="200">
+                  <h2 class="product-title">${data.name}</h2>
+                  <h4 class="product-calories">${data.calories}</h4>
+                  <h4 class="product-description">${data.description}</h4>
+            </article>`)
+        );
 
-    `;
-}
+        console.log(result);
 
-document.getElementById("product-container").innerHTML += `
-    ${products.map(productTemplate).join("")}
-`;
+        document.getElementById("product-container").innerHTML = result;
+    })
+    .catch((error) => console.log(error));
