@@ -5,12 +5,12 @@ class ProductItem {
         this.calories = item.calories;
         this.description = item.description;
         this.price = item.price;
-        this.img = item.img;
+        this.image = item.image;
     }
 
     render() {
         return `<article class="product-item">
-                  <img class="product-image" src="${this.name}" alt="${this.name}" height="200">
+                  <img class="product-image" src="${this.image}" alt="${this.name}" height="200">
                   <h2 class="product-title">${this.name}</h2>
                   <h4 class="product-calories">${this.calories}</h4>
                   <h4 class="product-description">${this.description}</h4>
