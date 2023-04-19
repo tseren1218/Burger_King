@@ -7,7 +7,6 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="./styles/style.css">
       <link rel="stylesheet" href="./styles/menu.css">
-      <script type="module" src="./js/DisplayProducts.js"></script>
       <script src="https://kit.fontawesome.com/ea59dd7bdf.js" crossorigin="anonymous"></script>
       <title>Меню</title>
 </head>
@@ -100,6 +99,11 @@
       <div id="product-container">
       </div>
 
+      <script type="module">
+            import Products from "./modules/Products.js";
+            const products = new Products("https://api.jsonbin.io/v3/b/643c9532ace6f33a220ca072", "beef");
+            products.download("product-container");
+      </script>
 
       <footer>
             <section class="footer-left-items">
