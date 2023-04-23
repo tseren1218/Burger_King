@@ -10,69 +10,144 @@ html {
   background-position-x: center;
   background-attachment: fixed;
 }
+
 .page-header {
   display: flex;
   width: 100%;
   height: 150px;
-  margin: 130px 0 50px 0;
+  margin: 130px 0px 50px 0px;
   padding: 0;
   justify-content: center;
   align-items: center;
   background-color: var(--default-brown);
 }
+
 .page-title {
-  font-size: 2.5em;
-  font-weight: 700;
+  font-size: 3em;
+    color: var(--default-white);
+  text-align: center;
 }
+
 .about-container {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  grid-row-gap: 60px;
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
   max-width: 1100px;
   margin: 0 auto;
-  padding: 30px 50px;
+  padding-bottom: 0;
+  flex-direction: row;
+}
+header{
+  width: 100%;
 }
 
-.terms-area {
+.about-area {
   grid-column: 1 / 2;
-  vertical-align: middle;
-  width: 50%;
+  width: 80%;
+}
+
+.about-title,
+.about-text li {
+  color: var(--default-brown);
+}
+
+.about-title {
+  font-size: 1.5em;
+  font-weight: 700;
+  text-align: center;
 }
 
 .about-text {
   text-align: justify;
-  line-height: 1.35em;
+  line-height: 2em;
+  color: var(--default-brown);
+  font-size: 100%;
 }
 
-/* .terms-image {
-  width: 80%;
-} */
-
-.terms-area-sondgoi {
+.about-area-sondgoi {
   grid-row: 2 / 3;
   grid-column: 2 / 3;
-}
-h1 {
-  font-size: 32px;
-  margin: 0 auto;
-}
-
-.about_medeelel img {
-  float: left;
-  margin-right: 10px; /* Adjust as needed */
-}
-
-.terms-image {
-  margin-bottom: 100px;
-}
-
-.about_medeelel img {
-  overflow: auto; /* Clears the float */
+  width: 100%;
 }
 
 .about-us-healing {
   display: none;
 }
+.about-img{
+  width: 504px;
+  height: 357px;
+}
+
+@media (max-width: 1000px) {
+
+ .about-container {
+   grid-template-columns: 1fr;
+   grid-template-rows: auto;
+   grid-template-areas:
+      "img1"
+      "text1"
+      "img2"
+      "text2"
+      "img3"
+      "text3";
+  }
+  
+  .about-img-area:nth-child(1) {
+    grid-area: img1;
+  }
+  .about-area:nth-child(2) {
+    grid-area: text1;
+  }
+  .about-img-area:nth-child(2) {
+    grid-area: img2;
+  }
+  .about-area-sondgoi {
+    grid-area: text2;
+  }
+  .about-area:nth-child(4) {
+    grid-area: img3;
+  }
+  .about-area:nth-child(5) {
+    grid-area: text3;
+  }
+  .about-area {
+    position: relative;
+    grid-column: 1 / 2;
+    width: 90%;
+    z-index: 1; 
+    padding: 0 20px;
+  }
+  .about-area-sondgoi {
+    width: 90%;
+    padding: 0 20px;
+  }
+  .about-img-area {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .about-img {
+    width: 100%;
+    height: auto;
+    z-index: 0;
+  }
+  .about-title {
+    text-align: center;
+    color: black;
+  }
+  .about-text{
+    color: black;
+  }
+  .about-img {
+    opacity: 0.4;
+  }
+
+}
+
+@media (max-width: 600px) {
+    .sags {
+    display: none;
+  }
+}
+  
