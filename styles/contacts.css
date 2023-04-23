@@ -16,6 +16,14 @@
     color: var(--default-white);
 }
 
+h2 {
+    margin: 0 auto;
+}
+
+p {
+    margin: 0;
+}
+
 .contacts-container {
     display: flex;
     flex-direction: row;
@@ -27,23 +35,52 @@
 }
 
 .contacts-section {
-    padding: 20px;
-    background-color: var(--default-white);
+    background-color: var(--default-brown);
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+}
+
+.contacts-section-inbetween {}
+
+.contacts-inner-section {
+    background-color: var(--default-brown);
+}
+
+.contacts-middle-social {
+    padding: 8px;
+    margin: 10px;
+    background-color: var(--default-brown);
     border-radius: 25px;
 }
 
 .contacts-img {
-    border-radius: 25px;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+}
+
+.calllogo-img {
+    margin-right: 25px;
 }
 
 .contacts-name {
-    color: var(--default-brown);
+    color: var(--default-white);
 }
 
 .contacts-desc {
-    color: var(--default-brown);
-    font-weight: 500;
-    opacity: 0.8;
+    display: flex;
+    color: var(--default-white);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+}
+
+.contacts-desc-social {
+    color: var(--default-white);
+    font-size: 12px;
+    text-decoration: none !important;
 }
 
 @media (max-width: 800px) {
