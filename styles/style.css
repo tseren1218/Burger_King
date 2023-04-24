@@ -6,7 +6,7 @@ html {
     --responsive-default: #fff2e1;
     --background-yellow: #fac450;
     --button-red: #ff0000;
-    background-image: url(../images/bg_image.jpg);
+    background-image: url(../images/bg_image.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position-x: center;
@@ -198,11 +198,11 @@ ul li ul.dropdown li a:visited {
     padding: 0;
 }
 
-#check:checked ~ ul.dropdown {
+#check:checked~ul.dropdown {
     display: block;
 }
 
-#check:checked ~ ul.dropdown .responsive-items {
+#check:checked~ul.dropdown .responsive-items {
     display: none;
 }
 
@@ -342,10 +342,12 @@ footer h3 {
     nav ul li {
         display: none;
     }
+
     .logo {
         height: 75px;
         width: auto;
     }
+
     nav ul li .checkbtn {
         display: block;
     }

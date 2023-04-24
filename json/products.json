@@ -7,7 +7,6 @@
         "price": "27000₮",
         "image": "../images/double_bacon_king.png"
     },
-
     {
         "name": "Кинг бокс сет",
         "category": "set",
@@ -16,7 +15,6 @@
         "price": "27000₮",
         "image": "../images/king_box.png"
     },
-
     {
         "name": "Тендер грилл сет",
         "category": "chicken",
@@ -25,7 +23,6 @@
         "price": "27000₮",
         "image": "../images/tender_grill.png"
     },
-
     {
         "name": "Халапено воппер сет",
         "category": "beef",
@@ -34,7 +31,6 @@
         "price": "27000₮",
         "image": "../images/halapeno_whopper_set.png"
     },
-
     {
         "name": "Снек бакет",
         "category": "hachir",
@@ -43,7 +39,6 @@
         "price": "36000₮",
         "image": "../images/snack_bucket.png"
     },
-
     {
         "name": "Лонг чикен сет",
         "category": "chicken",
