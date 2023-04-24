@@ -5,7 +5,7 @@
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="description" content="Burger King Mongolia" >
+      <meta name="description" content="Burger King Mongolia">
       <link rel="stylesheet" href="./styles/style.css">
       <link rel="stylesheet" href="./styles/menu.css">
       <script src="https://kit.fontawesome.com/ea59dd7bdf.js" crossorigin="anonymous"></script>
@@ -47,7 +47,7 @@
                   </ul>
             </nav>
       </header>
-      <script >
+      <script>
             window.addEventListener("scroll", function () {
                   var header = document.querySelector("header");
                   header.classList.toggle("sticky", window.scrollY > 100);
@@ -58,62 +58,64 @@
       <article class="page-header">
             <h2 class="menu-none">About Us</h2>
             <article class="menu-container">
-                  <h2 class="page-title">Меню</h2>
-                  <a href="beef" class="grid-item">
-                        <section class="beef">
-                              <h2 class="menu-none">Beef Dishes</h2>
-                              <img src="./images/beef.png" alt="beef burger">
-                              <p class="grid-item-title">Үхрийн махтай</p>
-                        </section>
-                  </a>
-                  <a href="chicken" class="grid-item">
-                        <section class="chicken">
-                              <h2 class="menu-none">chicken Dishes</h2>
-                              <img src="./images/tahia.png" alt="chicken burger">
-                              <p class="grid-item-title">Тахианы махтай</p>
-                        </section>
-                  </a>
-                  <a href="bagts" class="grid-item">
-                        <section class="bagts">
-                              <h2 class="menu-none">bagts Dishes</h2>
-                              <img src="./images/king_box.png" alt="bagts">
-                              <p class="grid-item-title">Багц</p>
-                        </section>
-                  </a>
-                  <a href="dan" class="grid-item">
-                        <section class="dan">
-                              <h2 class="menu-none">hachir Dishes</h2>
-                              <img src="./images/double_bacon_king.png" alt="single burger">
-                              <p class="grid-item-title">Дан</p>
-                        </section>
-                  </a>
-                  <a href="hachir" class="grid-item">
-                        <section class="hachir">
-                              <h2 class="menu-none">hachir Dishes</h2>
-                              <img src="./images/hachir.png" alt="Hachir">
-                              <p class="grid-item-title">Хачир</p>
-                        </section>
-                  </a>
-                  <a href="merch" class="grid-item">
-                        <section class="merch">
-                              <h2 class="menu-none">merch Dishes</h2>
-                              <img src="./images/merch.png" alt="merch">
-                              <p class="grid-item-title">Мерч</p>
-                        </section>
-                  </a>
+                  <h1 class="page-title">Меню</h1>
+                  <a href="./beef.html" class="grid-item">
+                        <h2 class="page-title">Меню</h2>
+                        <a href="beef" class="grid-item">
+                              <section class="beef">
+                                    <h2 class="menu-none">Beef Dishes</h2>
+                                    <img src="./images/beef.png" alt="beef burger">
+                                    <p class="grid-item-title">Үхрийн махтай</p>
+                              </section>
+                        </a>
+                        <a href="./chicken.html" class="grid-item">
+                              <section class="chicken">
+                                    <h2 class="menu-none">chicken Dishes</h2>
+                                    <img src="./images/tahia.png" alt="chicken burger">
+                                    <p class="grid-item-title">Тахианы махтай</p>
+                              </section>
+                        </a>
+                        <a href="./set.html" class="grid-item">
+                              <section class="bagts">
+                                    <h2 class="menu-none">bagts Dishes</h2>
+                                    <img src="./images/king_box.png" alt="bagts">
+                                    <p class="grid-item-title">Багц</p>
+                              </section>
+                        </a>
+                        <a href="./single.html" class="grid-item">
+                              <section class="dan">
+                                    <h2 class="menu-none">hachir Dishes</h2>
+                                    <img src="./images/double_bacon_king.png" alt="single burger">
+                                    <p class="grid-item-title">Дан</p>
+                              </section>
+                        </a>
+                        <a href="./hachir.html" class="grid-item">
+                              <section class="hachir">
+                                    <h2 class="menu-none">hachir Dishes</h2>
+                                    <img src="./images/hachir.png" alt="Hachir">
+                                    <p class="grid-item-title">Хачир</p>
+                              </section>
+                        </a>
+                        <a href="./merch.html" class="grid-item">
+                              <section class="merch">
+                                    <h2 class="menu-none">merch Dishes</h2>
+                                    <img src="./images/merch.png" alt="merch">
+                                    <p class="grid-item-title">Мерч</p>
+                              </section>
+                        </a>
             </article>
       </article>
 
       <div id="product-container">
       </div>
 
-      <!--
+
       <script type="module">
             import Products from "./modules/Products.js";
-            const products = new Products("https://api.jsonbin.io/v3/b/643c9532ace6f33a220ca072", "beef");
+            const products = new Products("https://api.jsonbin.io/v3/b/643c9532ace6f33a220ca072", "all");
             products.download("product-container");
       </script>
-      -->
+
 
       <footer>
             <section class="footer-left-items">
