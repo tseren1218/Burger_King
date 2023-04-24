@@ -386,3 +386,10 @@ footer h3 {
     transition-duration: 10sms;
   }
 }
+
+@media (max-width: 610px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+  }
+}
