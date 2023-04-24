@@ -1,0 +1,151 @@
+html {
+    --default-brown: #5e1f13;
+    --default-white: #ffefdc;
+    --responsive-default: #fff2e1;
+    --background-yellow: #fac450;
+    --button-red: #ff0000;
+    background-image: url(../images/bg_image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    background-attachment: fixed;
+}
+
+.page-header {
+    display: flex;
+    width: 100%;
+    height: 150px;
+    margin: 130px 0px 50px 0px;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--default-brown);
+}
+
+.page-title {
+    font-size: 3em;
+    color: var(--default-white);
+    text-align: center;
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-bottom: 0;
+    flex-direction: row;
+}
+header {
+    width: 100%;
+}
+
+.about-area {
+    grid-column: 1 / 2;
+    width: 80%;
+}
+
+.about-title,
+.about-text li {
+    color: var(--default-brown);
+}
+
+.about-title {
+    font-size: 1.5em;
+    font-weight: 700;
+    text-align: center;
+}
+
+.about-text {
+    text-align: justify;
+    line-height: 2em;
+    color: var(--default-brown);
+    font-size: 100%;
+}
+
+.about-area-sondgoi {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    width: 100%;
+}
+
+.about-us-healing {
+    display: none;
+}
+.about-img {
+    border-radius: 100px;
+    width: 504px;
+    height: 357px;
+}
+
+@media (max-width: 1000px) {
+    .about-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "img1"
+            "text1"
+            "img2"
+            "text2"
+            "img3"
+            "text3";
+    }
+
+    .about-img-area:nth-child(1) {
+        grid-area: img1;
+    }
+    .about-area:nth-child(2) {
+        grid-area: text1;
+    }
+    .about-img-area:nth-child(2) {
+        grid-area: img2;
+    }
+    .about-area-sondgoi {
+        grid-area: text2;
+    }
+    .about-area:nth-child(4) {
+        grid-area: img3;
+    }
+    .about-area:nth-child(5) {
+        grid-area: text3;
+    }
+    .about-area {
+        position: relative;
+        grid-column: 1 / 2;
+        width: 90%;
+        z-index: 1;
+        padding: 0 20px;
+    }
+    .about-area-sondgoi {
+        width: 90%;
+        padding: 0 20px;
+    }
+    .about-img-area {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .about-img {
+        width: 100%;
+        height: auto;
+        z-index: 0;
+    }
+    .about-title {
+        text-align: center;
+        color: black;
+    }
+    .about-text {
+        color: black;
+    }
+    .about-img {
+        opacity: 0.4;
+    }
+}
+
+@media (max-width: 600px) {
+    .sags {
+        display: none;
+    }
+}

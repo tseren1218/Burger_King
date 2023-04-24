@@ -23,7 +23,7 @@
 }
 
 .carousel-item {
-    height: 500px;
+    height: 450px;
     position: absolute;
     top: 0;
     right: 0;
@@ -60,6 +60,9 @@
     display: none;
 }
 
+.index-none{
+    display: none;
+}
 .item-1 {
     z-index: 2;
     opacity: 1;
@@ -124,11 +127,12 @@
 }
 
 .special-item:hover {
-    transform: scale(1.03);
+    transform: scale(1.05);
     transition-duration: 100ms;
 }
 
 .special-img {
+    background-color: #fffeee;
     border-radius: 25px;
     padding: 10px;
 }
@@ -172,7 +176,7 @@ article a:visited {
 }
 
 .big-button:hover {
-    transform: scale(1.03);
+    transform: scale(1.05);
     transition-duration: 200ms;
 }
 
@@ -186,40 +190,11 @@ article a:visited {
     font-size: 40px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
     .special-container {
         flex-direction: column;
     }
     .delivery-menu-container {
         flex-direction: column;
-    }
-    .carousel-wrapper {
-        margin-top: 40%;
-    }
-
-    .arrow-next.arrow,
-    .arrow-prev.arrow {
-        margin: 0;
-    }
-
-    .carousel-wrapper .item-1,
-    .item-2,
-    .item-3 {
-        height: 50%;
-    }
-
-    .background-oval {
-        background-color: var(--responsive-default);
-        box-shadow: none;
-        padding: 2%;
-        margin: 0;
-    }
-
-    .special-section-title {
-        margin: 0;
-        padding: 0;
-        padding-top: 0;
-        font-size: 1.5rem;
-        color: var(--default-brown);
     }
 }

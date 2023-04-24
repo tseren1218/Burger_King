@@ -16,7 +16,9 @@
         "title title title title title title"
         "menu1 menu2 menu3 menu4 menu5 menu6";
 }
-
+.menu-none {
+    display: none;
+}
 .page-title {
     margin-bottom: 0;
     grid-area: title;
@@ -36,6 +38,12 @@
     justify-content: center;
     text-align: center;
     border-radius: 25px;
+    transition-duration: 200ms;
+}
+
+.grid-item:hover {
+    transition-duration: 200ms;
+    transform: scale(1.05);
 }
 
 .grid-item section img {

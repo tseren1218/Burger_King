@@ -9,16 +9,18 @@ class ProductItem {
     }
 
     render() {
-        return `<article class="product-item">
-                  <img class="product-image" src="${this.image}" alt="${this.name}" height="200">
-                  <h2 class="product-title">${this.name}</h2>
-                  <h4 class="product-calories">${this.calories}</h4>
-                  <h4 class="product-description">${this.description}</h4>
+        return `<article class="delivery-item">
+                  <img class="delivery-image" src="${this.image}" alt="${this.name}" height="200">
+                  <h2 class="delivery-title">${this.name}</h2>
+                  <h4 class="delivery-calories">${this.calories}</h4>
+                  <hr>
+                  <p class="price">${this.price}</p>
+                  <a href="" class="order-button">Сагсанд хийх</a>
             </article>`;
     }
 }
 
-export default class Products {
+export default class ProductsForDelivery {
     constructor(productsUrl, category) {
         this._productsList = [];
         this._productsUrl = productsUrl;
