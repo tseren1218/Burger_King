@@ -75,11 +75,6 @@ header {
 .about-us-healing {
     display: none;
 }
-.about-img {
-    border-radius: 100px;
-    width: 504px;
-    height: 357px;
-}
 
 @media (max-width: 1000px) {
     .about-container {
