@@ -16,7 +16,9 @@
         "title title title title title title"
         "menu1 menu2 menu3 menu4 menu5 menu6";
 }
-
+.menu-none {
+    display: none;
+}
 .page-title {
     margin-bottom: 0;
     grid-area: title;
