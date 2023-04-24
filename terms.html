@@ -46,6 +46,13 @@
         </nav>
     </header>
 
+    <script>
+        window.addEventListener("scroll", function () {
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 100);
+        })
+    </script>
+
 
     <article class="page-header">
         <h1 class="page-title">Үйлчилгээний нөхцөл</h1>
