@@ -31,7 +31,10 @@ export default class Products {
                 products.json().then((jsob) => {
                     const filteredProducts = jsob.record.filter(
                         (productItem) => {
-                            if (productItem.category == this._category)
+                            if (this._category == "all") return productItem;
+                            else if (
+                                productItem.category.includes(this._category)
+                            )
                                 return productItem;
                         }
                     );
