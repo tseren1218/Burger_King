@@ -28,6 +28,9 @@
     color: var(--default-brown);
 }
 
+.terms-none {
+    display: none;
+}
 .terms-title {
     font-size: 2.5em;
     font-weight: 700;
