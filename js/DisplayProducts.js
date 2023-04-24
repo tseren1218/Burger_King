@@ -1,7 +1,7 @@
 import products from "../json/products.json" assert { type: "json" };
 
 function productTemplate(product) {
-    return `
+    return ` 
     
             <article class="product-item">
                   <img class="product-image" src="${product.image}" alt="${product.name}" height="200">

@@ -40,8 +40,6 @@ p {
     border-top-left-radius: 25px;
 }
 
-.contacts-section-inbetween {}
-
 .contacts-inner-section {
     background-color: var(--default-brown);
 }
