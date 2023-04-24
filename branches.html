@@ -19,7 +19,7 @@
           <nav class="navbar-container">
                <ul class="navbar-left-items">
                     <li class="menu"><a href="./menu.html">Меню</a></li>
-                    <li class="branch"><a href="./branches.html">Салбар</a></li>
+                    <li class="branch"><a href="#">Салбар</a></li>
                     <li class="hurgelt"><a href="./delivery.html" class="hurgelt-button">Хүргэлт</a></li>
                     <li class="more">
                          <input type="checkbox" name="check" id="check">
@@ -47,7 +47,7 @@
           </nav>
      </header>
 
-     <script type="text/javascript">
+     <script>
           window.addEventListener("scroll", function () {
                var header = document.querySelector("header");
                header.classList.toggle("sticky", window.scrollY > 100);
@@ -59,27 +59,28 @@
      </article>
 
      <article class="branch-container">
+          <h2 class="branch-none">Branch Container</h2>
           <section class="branch-section">
-               <img src="images/e-mart.jpg" alt="emart salbar" class="branch-img" height="250">
+               <img src="images/e-mart.webp" alt="emart salbar" class="branch-img" height="250">
                <h2 class="branch-name">Бургер Кинг - Хан-уул Имарт салбар</h2>
                <p class="branch-desc">Сүхбаатар дүүрэг, 1-р хороо, Жамьянгийн гудамж</p>
           </section>
 
           <section class="branch-section">
-               <img src="images/han-uul.jpg" alt="han-uul salbar" class="branch-img" height="250">
+               <img src="images/han-uul.webp" alt="han-uul salbar" class="branch-img" height="250">
                <h2 class="branch-name">Бургер Кинг - 19 салбар</h2>
                <p class="branch-desc">Сүхбаатар дүүрэг, 1-р хороо, Жамьянгийн гудамж</p>
           </section>
 
           <section class="branch-section">
-               <img src="images/salbar.jpg" alt="emart salbar" class="branch-img" height="250">
+               <img src="images/salbar.webp" alt="emart salbar" class="branch-img" height="250">
                <h2 class="branch-name">Бургер Кинг - Миний дэлгүүр салбар</h2>
                <p class="branch-desc">Сүхбаатар дүүрэг, 1-р хороо, Жамьянгийн гудамж</p>
           </section>
 
           <section class="branch-section">
-               <img src="images/bagshiin_deed.jpg" alt="bagshiin_deed salbar" class="branch-img" height="250"
-                    width="500">
+               <img class="branch-img" src="./images/salbar.webp" 
+                    alt="Branch Image" height="250" width="500">
                <h2 class="branch-name">Бургер Кинг - Багшийн дээд салбар</h2>
                <p class="branch-desc">Сүхбаатар дүүрэг, 1-р хороо, Жамьянгийн гудамж</p>
           </section>
@@ -89,6 +90,7 @@
      <footer>
           <section class="footer-left-items">
                <section class="footer-icons">
+                    <h2 class="branch-none">Footer Icons</h2>
                     <a href="tel:+97677773030"><img src="/images/call_icon.png" alt="tel"></a>
                     <a href="https://www.youtube.com/@BurgerKingMN" target="_blank"><img src="/images/youtube_icon.png"
                               alt="youtube"></a>
