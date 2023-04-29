@@ -9,6 +9,7 @@
       <link rel="stylesheet" href="./styles/style.css">
       <link rel="stylesheet" href="./styles/menu.css">
       <script src="https://kit.fontawesome.com/ea59dd7bdf.js" crossorigin="anonymous"></script>
+      <script src="./modules/FilterByParam.js" type="module"></script>
       <title>Меню</title>
 </head>
 
@@ -58,38 +59,38 @@
       <div class="page-header">
             <article class="menu-container">
                   <h1 class="page-title">Меню</h1>
-                  <a href="./beef.html" class="grid-item">
-                        <section class="beef">
+                  <a role="button" id="beef" class="grid-item">
+                        <section>
                               <img src="./images/beef.png" alt="beef burger">
                               <h2 class="grid-item-title">Үхрийн махтай</h2>
                         </section>
                   </a>
-                  <a href="./chicken.html" class="grid-item">
-                        <section class="chicken">
+                  <a role="button" id="chicken" class="grid-item">
+                        <section>
                               <img src="./images/tahia.png" alt="chicken burger">
                               <h2 class="grid-item-title">Тахианы махтай</h2>
                         </section>
                   </a>
-                  <a href="./set.html" class="grid-item">
-                        <section class="bagts">
+                  <a role="button" id="set" class="grid-item">
+                        <section>
                               <img src="./images/king_box.png" alt="bagts">
                               <h2 class="grid-item-title">Багц</h2>
                         </section>
                   </a>
-                  <a href="./single.html" class="grid-item">
-                        <section class="dan">
+                  <a role="button" id="single" class=" grid-item">
+                        <section>
                               <img src="./images/double_bacon_king.png" alt="single burger">
                               <h2 class="grid-item-title">Дан</h2>
                         </section>
                   </a>
-                  <a href="./hachir.html" class="grid-item">
-                        <section class="hachir">
+                  <a role="button" id="hachir" class="grid-item">
+                        <section>
                               <img src="./images/hachir.png" alt="Hachir">
                               <h2 class="grid-item-title">Хачир</h2>
                         </section>
                   </a>
-                  <a href="./merch.html" class="grid-item">
-                        <section class="merch">
+                  <a role="button" id="merch" class="grid-item">
+                        <section>
                               <img src="./images/merch.png" alt="merch">
                               <h2 class="grid-item-title">Мерч</h2>
                         </section>
@@ -99,14 +100,6 @@
 
       <div id="product-container">
       </div>
-
-
-      <script type="module">
-            import Products from "./modules/Products.js";
-            const products = new Products("https://api.jsonbin.io/v3/b/643c9532ace6f33a220ca072", "all");
-            products.download("product-container");
-      </script>
-
 
       <footer>
             <section class="footer-left-items">

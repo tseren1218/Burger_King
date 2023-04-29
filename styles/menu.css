@@ -39,6 +39,7 @@
     text-align: center;
     border-radius: 25px;
     transition-duration: 200ms;
+    cursor: pointer;
 }
 
 .grid-item:hover {
