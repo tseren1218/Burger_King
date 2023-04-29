@@ -139,6 +139,7 @@
 
 .special-item-title {
     font-size: 35px;
+    color: var(--default-brown);
     margin: 0;
 }
 
