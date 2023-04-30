@@ -1,5 +1,6 @@
 class ProductItem {
     constructor(item) {
+        this.id = item.id;
         this.name = item.name;
         this.category = item.category;
         this.calories = item.calories;
@@ -9,12 +10,17 @@ class ProductItem {
     }
 
     render() {
-        return `<article class="product-item">
+        return `<a role="button" id="${this.id}" class="product-item">
                   <img class="product-image" src="${this.image}" alt="${this.name}" height="200">
                   <h2 class="product-title">${this.name}</h2>
                   <h4 class="product-calories">${this.calories}</h4>
+            </a>
+            <dialog open class="modal" id="${this.id}">
+                <img class="product-image" src="${this.image}" alt="${this.name}" height="200">
+                  <h2 class="product-title">${this.name}</h2>
+                  <h4 class="product-calories">${this.calories}</h4>
                   <h4 class="product-description">${this.description}</h4>
-            </article>`;
+            </dialog>`;
     }
 }
 

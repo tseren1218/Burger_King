@@ -19,7 +19,7 @@
 .menu-none {
     display: none;
 }
-.page-title {
+#page-title {
     margin-bottom: 0;
     grid-area: title;
     font-size: 3rem;
@@ -93,6 +93,7 @@ a:link {
     background-color: var(--default-white);
     border-radius: 25px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    cursor: pointer;
 }
 
 .product-image {

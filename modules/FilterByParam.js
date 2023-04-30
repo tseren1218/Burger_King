@@ -21,6 +21,7 @@ switch (usp.get("category")) {
             "beef"
         );
         products.download("product-container");
+        document.getElementById("page-title").textContent = "Үхрийн махтай";
         break;
     case "chicken":
         products = new Products(
@@ -28,6 +29,7 @@ switch (usp.get("category")) {
             "chicken"
         );
         products.download("product-container");
+        document.getElementById("page-title").textContent = "Тахианы махтай";
         break;
     case "set":
         products = new Products(
@@ -35,6 +37,7 @@ switch (usp.get("category")) {
             "set"
         );
         products.download("product-container");
+        document.getElementById("page-title").textContent = "Багц";
         break;
     case "single":
         products = new Products(
@@ -42,6 +45,7 @@ switch (usp.get("category")) {
             "single"
         );
         products.download("product-container");
+        document.getElementById("page-title").textContent = "Дан бүтээгдэхүүн";
         break;
     case "hachir":
         products = new Products(
@@ -49,6 +53,7 @@ switch (usp.get("category")) {
             "hachir"
         );
         products.download("product-container");
+        document.getElementById("page-title").textContent = "Хачир";
         break;
     case "merch":
         products = new Products(
@@ -56,6 +61,7 @@ switch (usp.get("category")) {
             "merch"
         );
         products.download("product-container");
+        document.getElementById("page-title").textContent = "Мерчендайз";
         break;
 }
 
