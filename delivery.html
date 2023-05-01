@@ -2,112 +2,109 @@
 <html lang="en">
 
 <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="./styles/style.css">
-      <link rel="stylesheet" href="./styles/delivery.css">
-      <script type="module" src="./js/DisplayProducts.js"></script>
-      <script src="https://kit.fontawesome.com/ea59dd7bdf.js" crossorigin="anonymous"></script>
-      <title>Хүргэлт</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Burger King website's delivery page, Web development course assignment">
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="./styles/delivery.css">
+  <script src="https://kit.fontawesome.com/ea59dd7bdf.js" crossorigin="anonymous"></script>
+  <title>Хүргэлт</title>
 </head>
 
 
 <body>
-      <header>
+  <header>
 
-            <nav class="navbar-container">
-                  <ul class="navbar-left-items">
-                        <li><a href="./menu.html">Меню</a></li>
-                        <li><a href="./branches.html">Салбар</a></li>
-                        <li class="hurgelt"><a href="./delivery.html" class="hurgelt-button">Хүргэлт</a></li>
-                        <li class="more">
-                              <input type="checkbox" name="check" id="check">
-                              <label for="check" class="checkbtn">
-                                    <i class="fas fa-bars"></i>
-                              </label>
-                              <ul class="dropdown">
-                                    <li class="responsive-items"><a href="./index.html">Нүүр</a></li>
-                                    <li class="responsive-items"><a href="./menu.html">Меню</a></li>
-                                    <li class="responsive-items"><a href="./branches.html">Салбар</a></li>
-                                    <li class="responsive-items"><a href="./delivery.html"
-                                                class="hurgelt-button">Хүргэлт</a>
-                                    </li>
-                                    <li><a href="./about.html">Бидний тухай</a></li>
-                                    <li><a href="./contacts.html">Холбоо барих</a></li>
-                                    <li><a href="./terms.html">Үйлчилгээний нөхцөл</a></li>
+    <nav class="navbar-container">
+      <ul class="navbar-left-items">
+        <li class="menu"><a href="./menu.html">Меню</a></li>
+        <li class="branch"><a href="./branches.html">Салбар</a></li>
+        <li class="hurgelt"><a href="./delivery.html" class="hurgelt-button">Хүргэлт</a></li>
+        <li class="more">
+          <input type="checkbox" name="check" id="check">
+          <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+          </label>
+          <ul class="dropdown">
+            <li class="responsive-items"><a href="./index.html">Нүүр</a></li>
+            <li class="responsive-items"><a href="./menu.html">Меню</a></li>
+            <li class="responsive-items"><a href="./branches.html">Салбар</a></li>
+            <li class="responsive-items"><a href="./delivery.html" class="hurgelt-button">Хүргэлт</a>
+            </li>
+            <li><a href="./about.html">Бидний тухай</a></li>
+            <li><a href="./contacts.html">Холбоо барих</a></li>
+            <li><a href="./terms.html">Үйлчилгээний нөхцөл</a></li>
 
-                              </ul>
-                        </li>
-                  </ul>
-                  <a href="./index.html"><img class="logo" src="./images/logo.png" alt="logo" height="80"></a>
-                  <ul class="navbar-right-items">
-                        <li>Сагс</li>
-                        <li>Хэл</li>
-                  </ul>
-            </nav>
-      </header>
+          </ul>
+        </li>
+      </ul>
+      <a href="./index.html"><img class="logo" src="./images/logos.webp" alt="logo" height="80"></a>
+      <ul class="navbar-right-items">
+        <li>Сагс</li>
+        <li>Хэл</li>
+      </ul>
+    </nav>
+  </header>
 
-      <script type="text/javascript">
-            window.addEventListener("scroll", function () {
-                  var header = document.querySelector("header");
-                  header.classList.toggle("sticky", window.scrollY > 100);
-            })
-      </script>
+  <script>
+    window.addEventListener("scroll", function () {
+      var header = document.querySelector("header");
+      header.classList.toggle("sticky", window.scrollY > 100);
+    })
+  </script>
 
-      <article class="page-header">
-            <article class="menu-container">
-                  <h1 class="page-title">Хүргэлт</h1>
-                  <a href="beef" class="grid-item">
-                        <section class="beef">
-                              <img src="images/beef.png" alt="beef burger">
-                              <p class="grid-item-title">Үхрийн махтай</p>
-                        </section>
-                  </a>
-                  <a href="chicken" class="grid-item">
-                        <section class="chicken">
-                              <img src="images/tahia.png" alt="chicken burger">
-                              <p class="grid-item-title">Тахианы махтай</p>
-                        </section>
-                  </a>
-                  <a href="bagts" class="grid-item">
-                        <section class="bagts">
-                              <img src="images/king_box.png" alt="bagts">
-                              <p class="grid-item-title">Багц</p>
-                        </section>
-                  </a>
-                  <a href="dan" class="grid-item">
-                        <section class="dan">
-                              <img src="images/double_bacon_king.png" alt="single burger">
-                              <p class="grid-item-title">Дан</p>
-                        </section>
-                  </a>
-                  <a href="hachir" class="grid-item">
-                        <section class="hachir">
-                              <img src="images/hachir.png" alt="Hachir">
-                              <p class="grid-item-title">Хачир</p>
-                        </section>
-                  </a>
-                  <a href="merch" class="grid-item">
-                        <section class="merch">
-                              <img src="images/merch.png" alt="merch">
-                              <p class="grid-item-title">Мерч</p>
-                        </section>
-                  </a>
-            </article>
-            <!-- <article class="card">
-            <img src="images/single whopper set.png" alt="Single Whopper set">
-            <h3 class="item-title"><b>СИНГЛ ВОППЕР СЕТ</b></h3>
-            <section class="container">
-                <h4 class="item-calories">999 ккал</h4> 
-                <hr>
-                <p class = "price">18'900₮</p>
-            </section> -->
-      </article>
+  <article class="page-header">
+    <article class="menu-container">
+      <h1 class="page-title">Хүргэлт</h1>
+      <a href="./beef.html" class="grid-item">
+        <section class="beef">
+          <h2 class="menu-none">Beef Dishes</h2>
+          <img src="images/beefs.webp" alt="beef burger" width="100" height="150">
+          <p class="grid-item-title">Үхрийн махтай</p>
+        </section>
+      </a>
+      <a href="./chicken.html" class="grid-item">
+        <section class="chicken">
+          <h2 class="menu-none">chicken Dishes</h2>
+          <img src="images/tahias.webp" alt="chicken burger">
+          <p class="grid-item-title">Тахианы махтай</p>
+        </section>
+      </a>
+      <a href="./set.html" class="grid-item">
+        <section class="bagts">
+          <h2 class="menu-none">bagts Dishes</h2>
+          <img src="images/king_boxs.webp" alt="bagts">
+          <p class="grid-item-title">Багц</p>
+        </section>
+      </a>
+      <a href="./single.html" class="grid-item">
+        <section class="dan">
+          <h2 class="menu-none">hachir Dishes</h2>
+          <img src="images/double_bacon_kings.webp" alt="single burger">
+          <p class="grid-item-title">Дан</p>
+        </section>
+      </a>
+      <a href="./hachir.html" class="grid-item">
+        <section class="hachir">
+          <h2 class="menu-none">hachir Dishes</h2>
+          <img src="images/hachirs.webp" alt="Hachir" width="100" height="150">
+          <p class="grid-item-title">Хачир</p>
+        </section>
+      </a>
+      <a href="./merch.html" class="grid-item">
+        <section class="merch">
+          <h2 class="menu-none">merch Dishes</h2>
+          <img src="images/merchs.webp" alt="merch">
+          <p class="grid-item-title">Мерч</p>
+        </section>
+      </a>
+    </article>
+  </article>
 
-      <div id="delivery-container">
+  <!-- <div id="delivery-container">
             <article class="delivery-item">
-                  <img src="images/single whopper set.png" alt="Single whopper set">
+                  <img src="images/single whopper set.png" alt="Single whopper set" height=200px>
                   <h2 class="delivery-title">СИНГЛ ВОППЕР СЕТ</h2>
                   <h4 class="delivery-calories">500 ккал</h4>
                   <hr>
@@ -154,33 +151,41 @@
                   <p class="price">18'900₮</p>
                   <a href="" class="order-button">Сагсанд хийх</a>
             </article>
-      </div>
+      </div> -->
 
-      <footer>
-            <section class="footer-left-items">
-                  <section class="footer-icons">
-                        <a href="tel:+97677773030"><img src="images/call_icon.png" alt="tel"></a>
-                        <a href="https://www.youtube.com/@BurgerKingMN" target="_blank"><img
-                                    src="images/youtube_icon.png" alt="youtube"></a>
-                        <a href="https://www.facebook.com/burgerkinginmongolia" target="_blank"><img
-                                    src="images/facebook_icon.png" alt="facebook"></a>
-                        <a href="https://www.instagram.com/burgerkingmongolia/" target="_blank"><img
-                                    src="images/instagram_icon.png" alt="instagram"></a>
-                  </section>
+  <div id="delivery-container"></div>
+
+  <script type="module">
+    import Products from "./modules/ProductsForDelivery.js";
+    const products = new Products("https://api.jsonbin.io/v3/b/643c9532ace6f33a220ca072", "all");
+    products.download("delivery-container");
+  </script>
+
+  <footer>
+    <section class="footer-left-items">
+      <section class="footer-icons">
+        <a href="tel:+97677773030"><img src="images/call_icon.webp" alt="tel"></a>
+        <a href="https://www.youtube.com/@BurgerKingMN" target="_blank"><img src="images/youtube_icon.webp"
+            alt="youtube"></a>
+        <a href="https://www.facebook.com/burgerkinginmongolia" target="_blank"><img src="images/facebook_icon.webp"
+            alt="facebook"></a>
+        <a href="https://www.instagram.com/burgerkingmongolia/" target="_blank"><img src="images/instagram_icon.webp"
+            alt="instagram"></a>
+      </section>
 
 
-                  <h2 class="footer-title">&#169; 2023 Burger King</h2>
+      <h2 class="footer-title">&#169; 2023 Burger King</h2>
 
-            </section>
+    </section>
 
-            <section class="footer-right-items">
-                  <h3 class="footer-h3">BKC INFO</h3>
-                  <ul class="bkc-info">
-                        <li><a href="/about.html">About BK</a></li>
-                        <li><a href="/contacts.html">Холбоо барих</a></li>
-                  </ul>
-            </section>
-      </footer>
+    <section class="footer-right-items">
+      <h3 class="footer-h3">BKC INFO</h3>
+      <ul class="bkc-info">
+        <li><a href="/about.html">About BK</a></li>
+        <li><a href="/contacts.html">Холбоо барих</a></li>
+      </ul>
+    </section>
+  </footer>
 </body>
 
 </html>

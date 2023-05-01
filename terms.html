@@ -18,8 +18,8 @@
 
         <nav class="navbar-container">
             <ul class="navbar-left-items">
-                <li><a href="./menu.html">Меню</a></li>
-                <li><a href="./branches.html">Салбар</a></li>
+                <li class="menu"><a href="./menu.html">Меню</a></li>
+                <li class="branch"><a href="./branches.html">Салбар</a></li>
                 <li class="hurgelt"><a href="./delivery.html" class="hurgelt-button">Хүргэлт</a></li>
                 <li class="more">
                     <input type="checkbox" name="check" id="check">
@@ -38,13 +38,20 @@
                     </ul>
                 </li>
             </ul>
-            <a href="./index.html"><img class="logo" src="./images/logo.png" alt="logo" height="80"></a>
+            <a href="./index.html"><img class="logo" src="./images/logo.webp" alt="logo" height="80"></a>
             <ul class="navbar-right-items">
                 <li>Сагс</li>
                 <li>Хэл</li>
             </ul>
         </nav>
     </header>
+
+    <script>
+        window.addEventListener("scroll", function () {
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 100);
+        })
+    </script>
 
 
     <article class="page-header">
@@ -54,8 +61,9 @@
 
 
     <article class="terms-container">
+        <h2 class="terms-none">Terms and Conditions</h2>
 
-        <img class="terms-img" src="images/terms.png" alt="terms picture" height="500">
+        <img class="terms-img" src="images/terms.webp" alt="terms picture" height="500">
 
         <section class="terms-area">
             <h2 class="terms-title">Хүргэлтийн нөхцөл</h2>
@@ -81,15 +89,15 @@
 
     <footer>
         <section class="footer-left-items">
-            <section class="footer-icons">
-                <a href="tel:+97677773030"><img src="/images/call_icon.png" alt="tel"></a>
-                <a href="https://www.youtube.com/@BurgerKingMN" target="_blank"><img src="/images/youtube_icon.png"
+            <div class="footer-icons">
+                <a href="tel:+97677773030"><img src="/images/call_icon.webp" alt="tel"></a>
+                <a href="https://www.youtube.com/@BurgerKingMN" target="_blank"><img src="/images/youtube_icon.webp"
                         alt="youtube"></a>
                 <a href="https://www.facebook.com/burgerkinginmongolia" target="_blank"><img
-                        src="/images/facebook_icon.png" alt="facebook"></a>
+                        src="/images/facebook_icon.webp" alt="facebook"></a>
                 <a href="https://www.instagram.com/burgerkingmongolia/" target="_blank"><img
-                        src="images/instagram_icon.png" alt="instagram"></a>
-            </section>
+                        src="images/instagram_icon.webp" alt="instagram"></a>
+            </div>
 
 
             <h2 class="footer-title">&#169; 2023 Burger King</h2>

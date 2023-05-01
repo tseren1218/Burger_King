@@ -5,22 +5,23 @@
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Burger King Mongolia">
       <link rel="stylesheet" href="./styles/style.css">
       <link rel="stylesheet" href="./styles/menu.css">
-      <script type="module" src="./js/DisplayProducts.js"></script>
       <script src="https://kit.fontawesome.com/ea59dd7bdf.js" crossorigin="anonymous"></script>
+      <script src="./modules/FilterByParam.js" type="module"></script>
+      <script src="./modules/PopUp.js" type="module" defer></script>
       <title>Меню</title>
 </head>
 
 
 <body>
       <header>
-<<<<<<< HEAD
 
             <nav class="navbar-container">
                   <ul class="navbar-left-items">
-                        <li><a href="./menu.html">Меню</a></li>
-                        <li><a href="./branches.html">Салбар</a></li>
+                        <li class="menu"><a href="./menu.html">Меню</a></li>
+                        <li class="branch"><a href="./branches.html">Салбар</a></li>
                         <li class="hurgelt"><a href="./delivery.html" class="hurgelt-button">Хүргэлт</a></li>
                         <li class="more">
                               <input type="checkbox" name="check" id="check">
@@ -48,7 +49,7 @@
                   </ul>
             </nav>
       </header>
-      <script type="text/javascript">
+      <script>
             window.addEventListener("scroll", function () {
                   var header = document.querySelector("header");
                   header.classList.toggle("sticky", window.scrollY > 100);
@@ -56,59 +57,55 @@
       </script>
 
 
-      <article class="page-header">
+      <div class="page-header">
             <article class="menu-container">
-                  <h1 class="page-title">Меню</h1>
-                  <a href="beef" class="grid-item">
-                        <section class="beef">
-                              <img src="./images/beef.png" alt="beef burger">
-                              <p class="grid-item-title">Үхрийн махтай</p>
+                  <h1 id="page-title">Меню</h1>
+                  <a role="button" id="beef" class="grid-item">
+                        <section>
+                              <img src="./images/beefs.webp" alt="beef burger">
+                              <h2 class="grid-item-title">Үхрийн махтай</h2>
                         </section>
                   </a>
-                  <a href="chicken" class="grid-item">
-                        <section class="chicken">
-                              <img src="./images/tahia.png" alt="chicken burger">
-                              <p class="grid-item-title">Тахианы махтай</p>
+                  <a role="button" id="chicken" class="grid-item">
+                        <section>
+                              <img src="./images/tahias.webp" alt="chicken burger">
+                              <h2 class="grid-item-title">Тахианы махтай</h2>
                         </section>
                   </a>
-                  <a href="bagts" class="grid-item">
-                        <section class="bagts">
-                              <img src="./images/king_box.png" alt="bagts">
-                              <p class="grid-item-title">Багц</p>
+                  <a role="button" id="set" class="grid-item">
+                        <section>
+                              <img src="./images/king_boxs.webp" alt="bagts">
+                              <h2 class="grid-item-title">Багц</h2>
                         </section>
                   </a>
-                  <a href="dan" class="grid-item">
-                        <section class="dan">
-                              <img src="./images/double_bacon_king.png" alt="single burger">
-                              <p class="grid-item-title">Дан</p>
+                  <a role="button" id="single" class=" grid-item">
+                        <section>
+                              <img src="./images/double_bacon_kings.webp" alt="single burger">
+                              <h2 class="grid-item-title">Дан</h2>
                         </section>
                   </a>
-                  <a href="hachir" class="grid-item">
-                        <section class="hachir">
-                              <img src="./images/hachir.png" alt="Hachir">
-                              <p class="grid-item-title">Хачир</p>
+                  <a role="button" id="hachir" class="grid-item">
+                        <section>
+                              <img src="./images/hachirs.webp" alt="Hachir">
+                              <h2 class="grid-item-title">Хачир</h2>
                         </section>
                   </a>
-                  <a href="merch" class="grid-item">
-                        <section class="merch">
-                              <img src="./images/merch.png" alt="merch">
-                              <p class="grid-item-title">Мерч</p>
+                  <a role="button" id="merch" class="grid-item">
+                        <section>
+                              <img src="./images/merchs.webp" alt="merch">
+                              <h2 class="grid-item-title">Мерч</h2>
                         </section>
                   </a>
             </article>
-      </article>
+      </div>
 
       <div id="product-container">
       </div>
 
-
-
-
-
-
       <footer>
             <section class="footer-left-items">
                   <section class="footer-icons">
+                        <h2 class="menu-none">Follow Us</h2>
                         <a href="tel:+97677773030"><img src="./images/call_icon.png" alt="tel"></a>
                         <a href="https://www.youtube.com/@BurgerKingMN" target="_blank"><img
                                     src="./images/youtube_icon.png" alt="youtube"></a>
@@ -130,86 +127,6 @@
                         <li><a href="./contacts.html">Холбоо барих</a></li>
                   </ul>
             </section>
-=======
-            <nav class="navbar">
-              <ul class="navbar-left-items">
-                <li><a href="/menu.html">Меню</a></li>
-                <li><a href="">Салбар</a></li>
-                <li><a href="/delivery.html">Хүргэлт</a></li>
-              </ul>
-              <a href="/index.html"><img src="images/logo.png" alt="logo" height="80"></a>
-              <ul class="navbar-right-items">
-                <li><a href="">Сагс</a></li>
-                <li><a href="">Хэл</a></li>
-              </ul>
-            </nav>
-       </header>
-      
-      <article class="menu">
-            
-            <h1 class="menu-title">Меню</h1>
-            <a href="beef">
-                  <section class="beef">
-                        <img src="images/beef.png" alt="beef burger" height="10%" width="10%"> 
-                        Үхрийн махтай
-                  </section>
-            </a>
-            <a href="chicken">
-                  <section class="chicken">
-                        <img src="images/tahia.png" alt="chicken burger" height="10%" width="10%"> 
-                        Тахианы махтай
-                  </section>
-            </a>
-            <a href="bagts">
-                  <section class="bagts">
-                        <img src="images/king_box.png" alt="bagts" height="10%" width="10%"> 
-                        Багц
-                  </section>
-            </a>
-            <a href="dan">
-                  <section class="dan">
-                        <img src="images/double_bacon_king.png" alt="single burger" height="10%" width="10%"> 
-                        Дан
-                  </section>
-            </a>
-            <a href="hachir">
-                  <section class="hachir">
-                        <img src="images/hachir.png" alt="Hachir" height="10%" width="10%"> 
-                        Хачир
-                  </section>
-            </a>
-            <a href="merch">
-                  <section class="merch">
-                        <img src="images/merch.png" alt="merch" height="10%" width="10%"> 
-                        Үхрийн махтай
-                  </section>
-            </a>
-      </article>
-
-      <article class="card">
-            <img src="images/single whopper set.png" alt="Single Whopper set" height="15%" width="15%">
-            <h3 class="title"><b>Сингл Воппер сет</b></h3>
-            <section class="container">
-                <h4>999 ккал</h4> 
-                <p>Ил гал дээр шарсан тахианы мах, Lettuce, Шарсан төмс, Ундаа</p>
-            </section>
-        </article>
-      
-      <footer>
-            <a href="tel:+97677773030"><img src="images/call_icon.png" alt="tel"></a>
-      <a href="https://www.youtube.com/@BurgerKingMN" target="_blank"><img src="images/youtube_icon.png" alt="youtube"></a>
-            <a href="https://www.facebook.com/burgerkinginmongolia" target="_blank"><img src="images/facebook_icon.png" alt="facebook"></a>
-            <a href="https://www.instagram.com/burgerkingmongolia/" target="_blank"><img src="images/instagram_icon.png" alt="instagram"></a>
-      
-            <h2 class="footer-title">&#169; 2023 Burger King</h2>
-            
-            <h3 class="footer-h3">BKC INFO</h3>
-            <ul class="bkc-info"> 
-            <li><a href="/about.html">About BK</a></li>
-            <li><a href="/contacts.html">Холбоо барих</a></li>
-            </ul>
-      
->>>>>>> 05cfb0b1859b4f5a85df1406a956657f195c74bf
       </footer>
 </body>
 

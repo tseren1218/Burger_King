@@ -16,8 +16,10 @@
         "title title title title title title"
         "menu1 menu2 menu3 menu4 menu5 menu6";
 }
-
-.page-title {
+.menu-none {
+    display: none;
+}
+#page-title {
     margin-bottom: 0;
     grid-area: title;
     font-size: 3rem;
@@ -36,6 +38,13 @@
     justify-content: center;
     text-align: center;
     border-radius: 25px;
+    transition-duration: 200ms;
+    cursor: pointer;
+}
+
+.grid-item:hover {
+    transition-duration: 200ms;
+    transform: scale(1.05);
 }
 
 .grid-item section img {
@@ -84,6 +93,7 @@ a:link {
     background-color: var(--default-white);
     border-radius: 25px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    cursor: pointer;
 }
 
 .product-image {

@@ -51,7 +51,9 @@
 .branch-name {
     color: var(--default-brown);
 }
-
+.branch-none{
+    display: none;
+}
 .branch-desc {
     color: var(--default-brown);
     font-weight: 500;
