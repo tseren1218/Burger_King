@@ -5,7 +5,7 @@
         "calories": "500ккал",
         "description": "2 давхар үхрийн мах, бяслаг, бекон",
         "price": "27000₮",
-        "image": "../images/double_bacon_kingS.webp"
+        "image": "../images/double_bacon_kings.webp"
     },
 
     {
@@ -14,7 +14,7 @@
         "calories": "500ккал",
         "description": "2 давхар үхрийн мах, бяслаг, бекон",
         "price": "27000₮",
-        "image": "../images/king_boxS.webp"
+        "image": "../images/king_boxs.webp"
     },
 
     {
@@ -23,7 +23,7 @@
         "calories": "500ккал",
         "description": "2 давхар үхрийн мах, бяслаг, бекон",
         "price": "27000₮",
-        "image": "../images/tender_grillS.webp"
+        "image": "../images/tender_grills.webp"
     },
 
     {
@@ -32,7 +32,7 @@
         "calories": "500ккал",
         "description": "Үхрийн мах, ногоо",
         "price": "27000₮",
-        "image": "../images/halapeno_whopper_setS.webp"
+        "image": "../images/halapeno_whopper_sets.webp"
     },
 
     {
@@ -50,6 +50,6 @@
         "calories": "500ккал",
         "description": "Шарсан тахианы мах, гүнжидийн үртэй шинэхэн талхтай бургер, Шарсан төмс /дунд/, ундаа /дунд/",
         "price": "10900₮",
-        "image": "../images/long_chicken_setS.webp"
+        "image": "../images/long_chicken_sets.webp"
     }
 ]
