@@ -15,12 +15,7 @@ class ProductItem {
                   <h2 class="product-title">${this.name}</h2>
                   <h4 class="product-calories">${this.calories}</h4>
             </a>
-            <dialog open class="modal" id="${this.id}">
-                <img class="product-image" src="${this.image}" alt="${this.name}" height="200">
-                  <h2 class="product-title">${this.name}</h2>
-                  <h4 class="product-calories">${this.calories}</h4>
-                  <h4 class="product-description">${this.description}</h4>
-            </dialog>`;
+           `;
     }
 }
 
