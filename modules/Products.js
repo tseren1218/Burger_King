@@ -19,7 +19,8 @@ class ProductItem {
             imgSrc="${this.image}" 
             imgAlt="${this.name}" 
             productName="${this.name}" 
-            productCalories="${this.calories}">
+            productCalories="${this.calories}"
+            productDescription="${this.description}">
             </product-card>
            `;
     }

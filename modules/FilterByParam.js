@@ -2,8 +2,6 @@ import Products from "./Products.js";
 
 var usp = new URLSearchParams(window.location.search);
 
-console.log(usp.toString);
-
 if (!usp.has("category")) {
     const products = new Products(
         "https://api.jsonbin.io/v3/b/643c9532ace6f33a220ca072",

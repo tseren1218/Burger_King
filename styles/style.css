@@ -235,6 +235,7 @@ ul li ul.dropdown li a:visited {
 }
 
 footer {
+    position: relative;
     display: flex;
     padding: 20px 80px 8px 80px;
     margin-top: 100px;
@@ -391,5 +392,20 @@ footer h3 {
     footer {
         display: flex;
         flex-direction: column;
+    }
+
+    .footer-right-items {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .bkc-info {
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+        padding-left: 0;
+    }
+    .footer-h3 {
+        text-align: center;
     }
 }
