@@ -3,7 +3,7 @@ import PopUp from "../modules/PopUp.js"
 const template = document.createElement("template");
 
 template.innerHTML = `
-            <link rel="stylesheet" href="../../styles/menu.css"/>
+            <link rel="stylesheet" href="./styles/menu.css"/>
             <a role="button" id="" class="product-item">
                   <img class="product-image" height="200">
                   <h2 class="product-title"></h2>
@@ -27,7 +27,7 @@ class ProductCard extends HTMLElement {
     connectedCallback() {
         this.addEventListener("click", () => {
             this.insertAdjacentHTML("afterend", `
-            <link id="style" rel="stylesheet" href="../../styles/productCardStyle.css">
+            <link id="style" rel="stylesheet" href="./styles/productCardStyle.css">
             <div class="modal active" id="modal">
                 <div class="modal-body">
                     <button data-close-button class="close-button" id="close-button">&times;</button>
