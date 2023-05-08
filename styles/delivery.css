@@ -65,11 +65,13 @@ a:link {
 }
 
 #delivery-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 3%;
-  padding-left: 15%;
-  padding-right: 15%;
+  margin: 0 10% 0 10%;
+  display: flex;
+  gap: 1.5rem;
+  row-gap: 1.5rem;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .delivery-item {

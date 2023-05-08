@@ -4,12 +4,9 @@ export default class PopUp{
     close() {
         const closeModalButton = document.getElementById("close-button")
         closeModalButton.addEventListener("click", () => {
-            const link = document.getElementById("style")
-            link.remove();
-            const modal = document.getElementById("modal");
-            modal.remove();
-            const overlay = document.getElementById("overlay")
-            overlay.remove();
+            document.getElementById("style").remove();
+            document.getElementById("modal").remove();
+            document.getElementById("overlay").remove();
         });
 
 }
