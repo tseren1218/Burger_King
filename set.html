@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Burger King website's set menu, Web development course assignment">
     <link rel="stylesheet" href="./styles/style.css">
-    <link rel="stylesheet" href="./styles/menu.css">
+    <link rel="stylesheet" href="./styles/delivery.css">
     <script src="https://kit.fontawesome.com/ea59dd7bdf.js" crossorigin="anonymous"></script>
-    <title>Меню</title>
+    <title>Багц бүтээгдэхүүн</title>
 </head>
 
 
@@ -95,13 +96,13 @@
         </article>
     </div>
 
-    <div id="product-container">
+    <div id="delivery-container">
     </div>
 
     <script type="module">
-        import Products from "./modules/Products.js";
+        import Products from "./modules/ProductsForDelivery.js";
         const products = new Products("https://api.jsonbin.io/v3/b/643c9532ace6f33a220ca072", "set");
-        products.download("product-container");
+        products.download("delivery-container");
     </script>
 
     <footer>
