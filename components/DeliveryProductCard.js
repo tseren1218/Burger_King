@@ -25,7 +25,7 @@ class DeliveryProductCard extends HTMLElement {
                   <h4 class="delivery-calories"></h4>
                   <hr>
                   <p class="price"></p>
-                  <a role="button" class="order-button">Сагсанд хийх</a>
+                  <a role="button" class="order-button" id="order-button">Сагсанд хийх</a>
             </article>
         `
     }
@@ -45,7 +45,7 @@ class DeliveryProductCard extends HTMLElement {
                     <h2 class="product-title">${this.getAttribute("productName")}</h2>
                     <h4 class="product-calories">${this.getAttribute("productCalories")}</h4>
                     <p class="product-description">${this.getAttribute("productDescription")}</p>
-                                      <a role="button" class="order-button">Сагсанд хийх</a>
+                    <a role="button" class="order-button">Сагсанд хийх</a>
                 </div>
             </div>
             <div class="active" id="overlay"></div>

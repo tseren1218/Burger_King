@@ -40,6 +40,12 @@
   justify-content: center;
   text-align: center;
   border-radius: 25px;
+  transition-duration: 200ms;
+}
+
+.grid-item:hover {
+    transition-duration: 200ms;
+    transform: scale(1.05);
 }
 
 .grid-item section img {
