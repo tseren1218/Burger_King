@@ -18,7 +18,7 @@ class DeliveryProductCard extends HTMLElement {
         super();
         this.attachShadow({ mode: "open" });
         this.shadowRoot.innerHTML = `
-            <link rel="stylesheet" href="../../styles/delivery.css"/>
+            <link rel="stylesheet" href="../styles/delivery.css"/>
             <article id="" class="delivery-item">
                   <img class="delivery-image" height="200">
                   <h2 class="delivery-title"></h2>
@@ -37,7 +37,7 @@ class DeliveryProductCard extends HTMLElement {
     connectedCallback() {
         this.addEventListener("click", () => {
             this.insertAdjacentHTML("afterend", `
-            <link id="style" rel="stylesheet" href="../../styles/deliveryItemStyle.css">
+            <link id="style" rel="stylesheet" href="../styles/deliveryItemStyle.css">
             <div class="modal active" id="modal">
                 <div class="modal-body">
                     <button data-close-button class="close-button" id="close-button">&times;</button>

@@ -3,7 +3,7 @@ import PopUp from "../modules/PopUp.js"
 const template = document.createElement("template");
 
 template.innerHTML = `
-            <link rel="stylesheet" href="../../styles/menu.css"/>
+            <link rel="stylesheet" href="../styles/menu.css"/>
             <a role="button" id="" class="product-item">
                   <img class="product-image" height="200">
                   <h2 class="product-title"></h2>
