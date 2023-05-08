@@ -59,8 +59,41 @@
 [id^="item"] {
     display: none;
 }
+.carousel-item{
+    animation-name: sun-rise;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+ 
+  @keyframes sun-rise {
+    0% {
+      transform: translateY(50px);
+    }
+    50% {
+      transform: translateY(0);
+    }
+    100% {
+      
+      transform: translateY(-50px);
+    }
+  }
+ 
+  /* .item-1 {
+    animation-delay: 5s;
+  }
+ 
+  .item-2 {
+    animation-delay: 5s;
+  }
+ 
+  .item-3 {
+    animation-delay: 5s;
+  } */
 
-.index-none {
+
+
+  .index-none {
     display: none;
 }
 .item-1 {
@@ -70,6 +103,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+
 }
 
 .item-2 {
