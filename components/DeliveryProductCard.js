@@ -18,8 +18,8 @@ class DeliveryProductCard extends HTMLElement {
         super();
         this.attachShadow({ mode: "open" });
         this.shadowRoot.innerHTML = `
-            <link rel="stylesheet" href="../styles/delivery.css"/>
-            <article id="" class="delivery-item">
+            <link rel="stylesheet" href="./styles/delivery.css"/>
+            <article id="delivery-item" class="delivery-item">
                   <img class="delivery-image" height="200">
                   <h2 class="delivery-title"></h2>
                   <h4 class="delivery-calories"></h4>
@@ -35,9 +35,9 @@ class DeliveryProductCard extends HTMLElement {
     }
 
     connectedCallback() {
-        this.addEventListener("click", () => {
+        this.shadowRoot.getElementById("delivery-item").addEventListener("click", () => {
             this.insertAdjacentHTML("afterend", `
-            <link id="style" rel="stylesheet" href="../styles/deliveryItemStyle.css">
+            <link id="style" rel="stylesheet" href="./styles/deliveryItemStyle.css">
             <div class="modal active" id="modal">
                 <div class="modal-body">
                     <button data-close-button class="close-button" id="close-button">&times;</button>
@@ -45,7 +45,6 @@ class DeliveryProductCard extends HTMLElement {
                     <h2 class="product-title">${this.getAttribute("productName")}</h2>
                     <h4 class="product-calories">${this.getAttribute("productCalories")}</h4>
                     <p class="product-description">${this.getAttribute("productDescription")}</p>
-                    <a role="button" class="order-button">Сагсанд хийх</a>
                 </div>
             </div>
             <div class="active" id="overlay"></div>
@@ -55,7 +54,10 @@ class DeliveryProductCard extends HTMLElement {
             popUp.close();
         }
         )
-        
+        this.shadowRoot.getElementById("order-button").addEventListener("click", () => {
+            this.shadowRoot.getElementById("delivery-item").removeEventListener()
+            console.log("Added to cart");
+        })
       
     }
 
