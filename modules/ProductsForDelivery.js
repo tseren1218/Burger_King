@@ -1,3 +1,6 @@
+import DeliveryProductCard from "../components/DeliveryProductCard.js";
+window.customElements.define("delivery-product-card", DeliveryProductCard);
+
 class ProductItem {
     constructor(item) {
         this.name = item.name;
@@ -9,14 +12,16 @@ class ProductItem {
     }
 
     render() {
-        return `<article class="delivery-item">
-                  <img class="delivery-image" src="${this.image}" alt="${this.name}" height="200">
-                  <h2 class="delivery-title">${this.name}</h2>
-                  <h4 class="delivery-calories">${this.calories}</h4>
-                  <hr>
-                  <p class="price">${this.price}</p>
-                  <a href="" class="order-button">Сагсанд хийх</a>
-            </article>`;
+        return `
+            <delivery-product-card id="${this.id}" 
+            imgSrc="${this.image}" 
+            imgAlt="${this.name}" 
+            productName="${this.name}" 
+            productCalories="${this.calories}"
+            productDescription="${this.description}"
+            productPrice="${this.price}">
+            </delivery-product-card>
+           `;
     }
 }
 

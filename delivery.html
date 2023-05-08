@@ -105,8 +105,8 @@
   <div id="delivery-container"></div>
 
   <script type="module">
-    import Products from "./modules/ProductsForDelivery.js";
-    const products = new Products("https://api.jsonbin.io/v3/b/643c9532ace6f33a220ca072", "all");
+    import ProductsForDelivery from "./modules/ProductsForDelivery.js";
+    const products = new ProductsForDelivery("https://api.jsonbin.io/v3/b/643c9532ace6f33a220ca072", "all");
     products.download("delivery-container");
   </script>
 
