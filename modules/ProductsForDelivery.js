@@ -1,5 +1,5 @@
-import DeliveryProductCard from "../components/DeliveryProductCard.js";
-window.customElements.define("delivery-product-card", DeliveryProductCard);
+import CardComponent from "../components/CardComponent.js";
+window.customElements.define("card-component", CardComponent);
 
 class ProductItem {
     constructor(item) {
@@ -13,14 +13,15 @@ class ProductItem {
 
     render() {
         return `
-            <delivery-product-card id="${this.id}" 
+            <card-component id="${this.id}"
+            mode="delivery-item" 
             imgSrc="${this.image}" 
             imgAlt="${this.name}" 
-            productName="${this.name}" 
-            productCalories="${this.calories}"
-            productDescription="${this.description}"
-            productPrice="${this.price}">
-            </delivery-product-card>
+            name="${this.name}" 
+            calories="${this.calories}"
+            description="${this.description}"
+            price="${this.price}">
+            </card-component>
            `;
     }
 }

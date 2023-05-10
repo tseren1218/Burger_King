@@ -110,14 +110,14 @@ a:link {
 }
 
 .product-calories {
-    margin: 5%;
+    margin: 0;
     font-weight: 600;
     color: var(--default-brown);
     opacity: 0.5;
 }
 
 .product-description {
-    margin: 5%;
+    margin: 0;
     font-weight: 600;
     color: var(--default-brown);
     display: none;

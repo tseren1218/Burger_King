@@ -1,6 +1,5 @@
-import ProductCard from "../components/ProductCard.js";
-window.customElements.define("product-card", ProductCard);
-
+import CardComponent from "../components/CardComponent.js";
+window.customElements.define("card-component", CardComponent);
 
 class ProductItem {
     constructor(item) {
@@ -13,15 +12,16 @@ class ProductItem {
         this.image = item.image;
     }
 
-    render() {
+    render(mode) {
         return `
-            <product-card id="${this.id}" 
+            <card-component id="${this.id}" 
+            mode="${mode}"
             imgSrc="${this.image}" 
             imgAlt="${this.name}" 
-            productName="${this.name}" 
-            productCalories="${this.calories}"
-            productDescription="${this.description}">
-            </product-card>
+            name="${this.name}" 
+            calories="${this.calories}"
+            description="${this.description}">
+            </card-component>
            `;
     }
 
@@ -60,7 +60,8 @@ export default class Products {
                                     productItem
                                 );
                                 this._productsList.push(_productItem);
-                                return _productItem.render();
+
+                                return _productItem.render(document.URL.includes("menu.html") ? "menu-item": "delivery-item");
                             })
                             .reduce((prev, curr) => prev + curr + "");
                 });

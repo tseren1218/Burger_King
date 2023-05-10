@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="./styles/style.css">
   <link rel="stylesheet" href="./styles/delivery.css">
   <script src="https://kit.fontawesome.com/ea59dd7bdf.js" crossorigin="anonymous" defer></script>
+  <script src="./modules/FilterByParam.js" type="module"></script>
+  <script src="./modules/PopUp.js" type="module"></script>
   <title>Хүргэлт</title>
 </head>
 
@@ -57,58 +59,17 @@
   <div class="page-header">
     <article class="menu-container">
       <h1 class="page-title">Хүргэлт</h1>
-      <a href="./beef.html" class="grid-item">
-        <section class="beef">
-          <h2 class="menu-none">Beef Dishes</h2>
-          <img src="images/beefs.webp" alt="beef burger" width="100" height="150">
-          <p class="grid-item-title">Үхрийн махтай</p>
-        </section>
-      </a>
-      <a href="./chicken.html" class="grid-item">
-        <section class="chicken">
-          <h2 class="menu-none">chicken Dishes</h2>
-          <img src="images/tahias.webp" alt="chicken burger">
-          <p class="grid-item-title">Тахианы махтай</p>
-        </section>
-      </a>
-      <a href="./set.html" class="grid-item">
-        <section class="bagts">
-          <h2 class="menu-none">bagts Dishes</h2>
-          <img src="images/king_boxs.webp" alt="bagts">
-          <p class="grid-item-title">Багц</p>
-        </section>
-      </a>
-      <a href="./single.html" class="grid-item">
-        <section class="dan">
-          <h2 class="menu-none">hachir Dishes</h2>
-          <img src="images/double_bacon_kings.webp" alt="single burger">
-          <p class="grid-item-title">Дан</p>
-        </section>
-      </a>
-      <a href="./hachir.html" class="grid-item">
-        <section class="hachir">
-          <h2 class="menu-none">hachir Dishes</h2>
-          <img src="images/hachirs.webp" alt="Hachir" width="100" height="150">
-          <p class="grid-item-title">Хачир</p>
-        </section>
-      </a>
-      <a href="./merch.html" class="grid-item">
-        <section class="merch">
-          <h2 class="menu-none">merch Dishes</h2>
-          <img src="images/merchs.webp" alt="merch">
-          <p class="grid-item-title">Мерч</p>
-        </section>
-      </a>
+      <card-component mode="menu" id="beef" imgSrc="./images/beefs.webp" name="Үхрийн махтай"></card-component>
+      <card-component mode="menu" id="chicken" imgSrc="./images/tahias.webp" name="Тахианы махтай"></card-component>
+      <card-component mode="menu" id="set" imgSrc="./images/king_boxs.webp" name="Багц"></card-component>
+      <card-component mode="menu" id="single" imgSrc="./images/double_bacon_kings.webp"
+        name="Дан бүтээгдэхүүн"></card-component>
+      <card-component mode="menu" id="hachir" imgSrc="./images/hachirs.webp" name="Хачир"></card-component>
+      <card-component mode="menu" id="merch" imgSrc="./images/merchs.webp" name="Мерчендайз"></card-component>
     </article>
   </div>
 
-  <div id="delivery-container"></div>
-
-  <script type="module">
-    import ProductsForDelivery from "./modules/ProductsForDelivery.js";
-    const products = new ProductsForDelivery("https://api.jsonbin.io/v3/b/643c9532ace6f33a220ca072", "all");
-    products.download("delivery-container");
-  </script>
+  <div id="product-container"></div>
 
   <footer>
     <section class="footer-left-items">
