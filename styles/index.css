@@ -59,10 +59,6 @@
 [id^="item"] {
     display: none;
 }
-<<<<<<< Updated upstream
-
-.index-none {
-=======
 .carousel-item {
     animation-name: float;
     animation-duration: 5s;
@@ -90,7 +86,6 @@
   }
   
   .index-none {
->>>>>>> Stashed changes
     display: none;
 }
 .item-1 {
