@@ -11,6 +11,7 @@ html {
     background-attachment: fixed;
 }
 
+
 .page-header {
     display: flex;
     width: 100%;
@@ -20,6 +21,7 @@ html {
     justify-content: center;
     align-items: center;
     background-color: var(--default-brown);
+    overflow-x: hidden;
 }
 
 .page-title {
@@ -95,7 +97,7 @@ header {
     .about-area:nth-child(2) {
         grid-area: text1;
     }
-    .about-img-area:nth-child(2) {
+    .about-img-area:nth-child(3) {
         grid-area: img2;
     }
     .about-area-sondgoi {
@@ -121,9 +123,10 @@ header {
     .about-img-area {
         width: 100%;
         margin-bottom: 20px;
+        text-align: center;
     }
     .about-img {
-        width: 100%;
+        width: 80%;
         height: auto;
         z-index: 0;
     }
@@ -134,8 +137,9 @@ header {
     .about-text {
         color: black;
     }
-    .about-img {
-        opacity: 0.4;
+    
+    .about-area-sondgoi{
+        display: none;
     }
 }
 
@@ -143,5 +147,6 @@ header {
     .sags {
         display: none;
     }
+
 }
 

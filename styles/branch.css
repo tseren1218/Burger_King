@@ -42,10 +42,14 @@
     padding: 20px;
     background-color: var(--default-white);
     border-radius: 25px;
+    width: 80%;
+    height: auto;
 }
 
 .branch-img {
     border-radius: 25px;
+    width: 80%;
+    height: auto;
 }
 
 .branch-name {
