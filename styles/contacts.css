@@ -85,4 +85,17 @@ p {
     .contacts-container {
         flex-direction: column;
     }
+    .target-logo {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+      }
+      
+      .contacts-middle-social {
+        margin: 10px;
+        background-color: var(--default-brown);
+        border-radius: 25px;
+      }
+      
+      
 }
