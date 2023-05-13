@@ -54,6 +54,9 @@
 }
 
 @media (max-width: 1000px) {
+    .page-header {
+        height: 75px;
+    }
     .page-title {
         font-size: 1.75em;
     }
