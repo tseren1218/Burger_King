@@ -393,20 +393,43 @@ footer h3 {
     footer {
         display: flex;
         flex-direction: column;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
-    .footer-right-items {
-        justify-content: center;
-        text-align: center;
+    .footer-left-items {
+        flex-direction: row-reverse;
+        justify-content: space-between;
     }
-
+    .footer-title {
+        font-size: 1em;
+    }
+    .footer-icons {
+        display: flex;
+        flex-direction: row;
+    }
+          
+    .footer-icons a {
+        display: block;
+        position: relative;
+        margin-right: 5px;
+        width: 50%;
+    }
+    
+    .footer-h3 {
+        display: none;
+    }
     .bkc-info {
         display: flex;
-        justify-content: space-around;
-        list-style: none;
-        padding-left: 0;
-    }
-    .footer-h3 {
-        text-align: center;
-    }
+        flex-direction: row;
+        justify-content: center;
+        list-style-type: none;
+      }
+      
+      .bkc-info li {
+        margin-right: 25px;
+      }
+      
+      
+
 }

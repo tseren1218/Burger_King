@@ -220,7 +220,67 @@ article a:visited {
     .special-container {
         flex-direction: column;
     }
+    
     .delivery-menu-container {
         flex-direction: column;
+    }
+    
+    
+}
+@media (max-width: 700px) {
+    .special-section-title {
+        font-size: 1.75em;
+        padding-top: 0px;
+        margin-top: 30px;
+    }
+    .arrow-next {
+        right: 5px;
+        top: 100px;
+    }
+    .arrow-next.arrow {
+        margin: 10px;
+        padding: 5px;
+    }
+    .arrow-prev {
+        left: 5px;
+        top: 100px;
+    }
+    .arrow-prev.arrow {
+        margin: 10px;
+        padding: 5px;
+    }
+    .carousel-item {
+        height: 200px;
+    }
+    .carousel-wrapper {
+        height: 400px;
+    }
+    .background-oval{
+        padding-top: 10px;
+        padding-bottom: 15px;
+        height: auto;
+        width: 100%;
+    }
+    /* .special-item {
+        width: 80%;
+    }
+    .special-img {
+        width: 80%;
+        height: auto; */
+    .special-item-title {
+        font-size: 1.25em;
+    }
+    .special-item-calories{
+        font-size: 0.75em;
+    }
+    .big-button{
+        width: 20%;
+    }
+    .delivery-menu-img {
+        width: 50px;
+        height: 50px;
+    }
+    .delivery-menu-title {
+        font-size: 1.25em;
     }
 }
