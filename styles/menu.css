@@ -122,3 +122,28 @@ a:link {
     color: var(--default-brown);
     display: none;
 }
+@media (max-width: 768px){
+    .menu-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 30px;
+        grid-template-areas:
+          "title title title"
+          "menu1 menu2 menu3"
+          "menu4 menu5 menu6";
+      }
+}
+
+  
+  @media (max-width: 768px) {
+    .menu-container {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .menu-container {
+      grid-template-columns: 1fr;
+    }
+  }
+  

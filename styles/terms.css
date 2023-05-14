@@ -89,12 +89,12 @@
    
     .terms-list li {
         position: relative;
-        padding-left: 0px; /* Adjust as needed */
+        padding-left: 0px; 
         font-size: 1rem;
       }
     
       .terms-list li::before {
-        content: ""; /* Custom marker symbol */
+        content: ""; 
         position: absolute;
         left: 0;
       }
