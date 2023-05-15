@@ -5,14 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Burger King Mongolia">
-    <link rel="stylesheet" href="styles/terms.css">
-    <link rel="stylesheet" href="styles/style.css">
+    <meta name="description" content="Burger King website's delivery page, Web development course assignment">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/cart.css">
     <script src="https://kit.fontawesome.com/ea59dd7bdf.js" crossorigin="anonymous" defer></script>
+    <script src="./modules/PopUp.js" type="module"></script>
     <script src="./modules/onLoadCartNumber.js" defer></script>
+    <script src="./components/CartComponent.js" defer></script>
 
-    <title>Үйлчилгээний нөхцөл</title>
+    <title>Хүргэлт</title>
 </head>
+
 
 <body>
     <header>
@@ -57,51 +60,26 @@
         })
     </script>
 
-
     <article class="page-header">
-        <h1 class="page-title">Үйлчилгээний нөхцөл</h1>
+        <h1 class="page-title">Салбар</h1>
     </article>
 
 
-
-    <article class="terms-container">
-        <h2 class="terms-none">Terms and Conditions</h2>
-
-        <img class="terms-img" src="images/terms.webp" alt="terms picture" height="500">
-
-        <section class="terms-area">
-            <h2 class="terms-title">Хүргэлтийн нөхцөл</h2>
-
-            <ul class="terms-list">
-                <li>Хүргэлтийн үнэ 3000₮</li>
-                <li>20000₮-өөс дээш тохиолдолд хүргэлт хийгдэнэ</li>
-                <li>НӨАТ 10% бүтээгдэхүүний үнэд багтсан</li>
-                <li>Зөвхөн Улаанбаатар хотын “A”,”B” бүсэд хүргэлт хийгдэнэ</li>
-                <li>23:30 цаг хүртэл хүргэлтийн захиалга хүлээн авна.</li>
-                <li>Хүргэлтийн захиалга хийж төлбөр төлөгдсөн тохиолдолд захиалгыг цуцлахгүй</li>
-            </ul>
-        </section>
-
-
-
-
-    </article>
-
-
-
+    <cart-component></cart-component>
 
 
     <footer>
         <section class="footer-left-items">
-            <div class="footer-icons">
-                <a href="tel:+97677773030"><img src="/images/call_icon.webp" alt="tel"></a>
-                <a href="https://www.youtube.com/@BurgerKingMN" target="_blank"><img src="/images/youtube_icon.webp"
+            <section class="footer-icons">
+                <h2 class="menu-none">Follow Us</h2>
+                <a href="tel:+97677773030"><img src="./images/call_icon.png" alt="tel"></a>
+                <a href="https://www.youtube.com/@BurgerKingMN" target="_blank"><img src="./images/youtube_icon.png"
                         alt="youtube"></a>
                 <a href="https://www.facebook.com/burgerkinginmongolia" target="_blank"><img
-                        src="/images/facebook_icon.webp" alt="facebook"></a>
+                        src="./images/facebook_icon.png" alt="facebook"></a>
                 <a href="https://www.instagram.com/burgerkingmongolia/" target="_blank"><img
-                        src="images/instagram_icon.webp" alt="instagram"></a>
-            </div>
+                        src="./images/instagram_icon.png" alt="instagram"></a>
+            </section>
 
 
             <h2 class="footer-title">&#169; 2023 Burger King</h2>
@@ -111,15 +89,11 @@
         <section class="footer-right-items">
             <h3 class="footer-h3">BKC INFO</h3>
             <ul class="bkc-info">
-                <li><a href="/about.html">About BK</a>
-                </li>
-                <li><a href="/contacts.html">Холбоо
-                        барих</a>
-                </li>
+                <li><a href="/about.html">About BK</a></li>
+                <li><a href="/contacts.html">Холбоо барих</a></li>
             </ul>
         </section>
     </footer>
-
 </body>
 
 </html>

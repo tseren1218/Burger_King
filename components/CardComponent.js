@@ -82,6 +82,28 @@ class CardComponent extends HTMLElement {
                 popUp.close();
             }
             )
+
+            if (document.URL.includes("delivery.html")) {
+
+                var addToCartButton = this.shadowRoot.getElementById("order-button"); 
+
+                addToCartButton.addEventListener("click", () => {
+
+                    let product = {
+                        name: this.getAttribute("name"),
+                        price: this.getAttribute("price"),
+                    }
+
+                    let totalQuantity = localStorage.getItem('totalQuantity');
+                    totalQuantity = parseInt(totalQuantity);
+                    localStorage.setItem("totalQuantity", totalQuantity ? totalQuantity + 1 : 1);
+                    document.getElementsByClassName("cart-number")[0].innerHTML = totalQuantity ? totalQuantity + 1 : 1;
+                })
+
+                
+            }
+
+            
         }
     }
 
@@ -109,13 +131,6 @@ class CardComponent extends HTMLElement {
             default:
                 break;
         }
-
-        // this.shadowRoot.querySelector(".delivery-item #delivery-item-section .delivery-image").id = this.getAttribute("id");
-        // this.shadowRoot.querySelector(".delivery-item #delivery-item-section .delivery-image").src = this.getAttribute("imgSrc");
-        // this.shadowRoot.querySelector(".delivery-item #delivery-item-section .delivery-image").alt = this.getAttribute("imgAlt");
-        // this.shadowRoot.querySelector(".delivery-item #delivery-item-section .delivery-title").innerHTML = this.getAttribute("name");
-        // this.shadowRoot.querySelector(".delivery-item #delivery-item-section .delivery-calories").innerHTML = this.getAttribute("productCalories");
-        // this.shadowRoot.querySelector(".delivery-item #delivery-item-section .price").innerHTML = this.getAttribute("productPrice");
     }   
 }
 

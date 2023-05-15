@@ -234,6 +234,15 @@ ul li ul.dropdown li a:visited {
     transition-duration: 200ms;
 }
 
+.cart-number {
+    margin: 0 20%;
+    padding: 0 10%;
+    color: var(--default-white);
+    background-color: var(--default-brown);
+    border-radius: 50px;
+
+}
+
 footer {
     position: relative;
     display: flex;
