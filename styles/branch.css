@@ -48,7 +48,7 @@
 
 .branch-img {
     border-radius: 25px;
-    width: 80%;
+    width: -webkit-fill-available;
     height: auto;
 }
 
