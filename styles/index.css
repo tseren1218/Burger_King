@@ -253,12 +253,10 @@ article a:visited {
     }
     .carousel-wrapper {
         height: 400px;
-        margin-bottom: -200px;
     }
     .background-oval{
-        margin-top: 0;
-        padding-top: 50px;
-        padding-bottom: 50px;
+        padding-top: 10px;
+        padding-bottom: 15px;
         height: auto;
         width: 100%;
     }

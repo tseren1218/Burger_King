@@ -129,9 +129,9 @@ a:link {
         grid-template-columns: 1fr 1fr 1fr;
         gap: 30px;
         grid-template-areas:
-          "title title "
-          "menu1 menu2 "
-          "menu4 menu5";
+          "title title title"
+          "menu1 menu2 menu3"
+          "menu4 menu5 menu6";
       }
 }
 
