@@ -17,19 +17,18 @@
     display: block;
     margin: 180px 0 -140px 0;
 }
-
 .carousel-title {
     z-index: 1000;
 }
 
 .carousel-item {
     height: 450px;
-    position: absolute;
+    position: absolute; 
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    padding: 25px, 50px;
+    padding: 25px 50px;
     opacity: 0;
     transition: all 0.1s ease-in-out;
 }
@@ -220,7 +219,63 @@ article a:visited {
     .special-container {
         flex-direction: column;
     }
+    
     .delivery-menu-container {
         flex-direction: column;
+    }
+    
+    
+}
+@media (max-width: 700px) {
+    .special-section-title {
+        font-size: 1.75em;
+        padding-top: 0px;
+        margin-top: 30px;
+    }
+    .arrow-next {
+        right: 5px;
+        top: 100px;
+    }
+    .arrow-next.arrow {
+        margin: 10px;
+        padding: 5px;
+    }
+    .arrow-prev {
+        left: 5px;
+        top: 100px;
+    }
+    .arrow-prev.arrow {
+        margin: 10px;
+        padding: 5px;
+    }
+    .carousel-item {
+        height: 200px;
+    }
+    .carousel-wrapper {
+        height: 400px;
+        margin-bottom: -200px;
+    }
+    .background-oval{
+        margin-top: 0;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        height: auto;
+        width: 100%;
+    }
+    .special-item-title {
+        font-size: 1.25em;
+    }
+    .special-item-calories{
+        font-size: 0.75em;
+    }
+    .big-button{
+        width: 20%;
+    }
+    .delivery-menu-img {
+        width: 50px;
+        height: 50px;
+    }
+    .delivery-menu-title {
+        font-size: 1.25em;
     }
 }

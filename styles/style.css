@@ -234,15 +234,6 @@ ul li ul.dropdown li a:visited {
     transition-duration: 200ms;
 }
 
-.cart-number {
-    margin: 0 20%;
-    padding: 0 10%;
-    color: var(--default-white);
-    background-color: var(--default-brown);
-    border-radius: 50px;
-
-}
-
 footer {
     position: relative;
     display: flex;
@@ -253,6 +244,7 @@ footer {
     justify-content: space-between;
     color: var(--default-white);
     text-decoration: none;
+    
 }
 
 footer a {
@@ -281,73 +273,6 @@ footer a:visited {
 footer h3 {
     margin: 0;
 }
-
-/* @media screen and (max-width: 500px) {
-    html {
-        background-image: none;
-        background-color: var(--responsive-default);
-    }
-
-    .navbar-container {
-        all: unset;
-        width: 100%;
-        height: 70px;
-        margin: 0;
-        display: flex;
-        justify-content: space-between;
-        position: fixed;
-        bottom: 0;
-        top: auto;
-
-        background-color: var(--responsive-default);
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    }
-
-    .navbar-left-items {
-        display: none;
-    }
-
-    .navbar-right-items {
-        display: none;
-    }
-
-    .more {
-        display: flex;
-        color: var(--default-brown);
-    }
-
-    .navbar-container ul {
-        margin: 0;
-        padding: 0;
-    }
-
-    .navbar-container ul li {
-        color: var(--default-brown);
-    }
-
-    .logo {
-        position: absolute;
-        right: 250px;
-        height: 4rem;
-    }
-
-    .hurgelt {
-        padding: 10px 20px 10px 20px;
-    }
-
-    .hurgelt-button {
-        all: unset;
-        cursor: pointer;
-    }
-
-    .sticky {
-        all: unset;
-    }
-
-    .logo {
-    }
-} */
-
 @media (max-width: 900px) {
     nav ul .menu,
     .branch,
@@ -393,7 +318,7 @@ footer h3 {
     }
     .hurgelt-button:hover {
         background-color: #ddd;
-        transition-duration: 10sms;
+        transition-duration: 10ms;
     }
 }
 
@@ -401,20 +326,43 @@ footer h3 {
     footer {
         display: flex;
         flex-direction: column;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
-    .footer-right-items {
-        justify-content: center;
-        text-align: center;
+    .footer-left-items {
+        flex-direction: row-reverse;
+        justify-content: space-between;
     }
-
+    .footer-title {
+        font-size: 1em;
+    }
+    .footer-icons {
+        display: flex;
+        flex-direction: row;
+    }
+          
+    .footer-icons a {
+        display: block;
+        position: relative;
+        margin-right: 5px;
+        width: 50%;
+    }
+    
+    .footer-h3 {
+        display: none;
+    }
     .bkc-info {
         display: flex;
-        justify-content: space-around;
-        list-style: none;
-        padding-left: 0;
-    }
-    .footer-h3 {
-        text-align: center;
-    }
+        flex-direction: row;
+        justify-content: center;
+        list-style-type: none;
+      }
+      
+      .bkc-info li {
+        margin-right: 25px;
+      }
+      
+      
+
 }

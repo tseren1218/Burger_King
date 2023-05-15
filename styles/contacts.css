@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
 
+
 .page-header {
     display: flex;
     width: 100%;
@@ -82,7 +83,46 @@ p {
 }
 
 @media (max-width: 800px) {
-    .contacts-container {
-        flex-direction: column;
+    .page-header {
+        height: 75px;
     }
-}
+    .page-title {
+        font-size: 1.75em;
+    }
+    .contacts-container {
+        display:flex;
+        justify-content: center;
+    }
+    h2 {
+        font-size: 1.25em;
+    }
+    .contacts-desc {
+        font-size: 1.25em;
+    }
+    .contacts-desc-social {
+        font-size: 0.5em;
+    }
+    .target-logo {
+        width:  30%;
+        height: auto;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        
+    
+      }
+     .contacts-middle-social {
+        margin: 5px;
+        background-color: var(--default-brown);
+        border-radius: 25px;
+        width: 80%;
+      }
+      .contacts-section{
+        width: 80%;
+        
+      }
+      .contacts-img{
+        width: 100%;
+        height: auto;
+      }
+    }

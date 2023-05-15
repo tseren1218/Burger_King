@@ -156,3 +156,14 @@ hr {
     background-color: #5e1f13;
     color: var(--default-white);
 }
+@media (max-width: 768px){
+    .menu-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        grid-template-areas:
+          "title title "
+          "menu1 menu2 "
+          "menu4 menu5";
+      }
+}

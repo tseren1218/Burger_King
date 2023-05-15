@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
 
-/* html {
+ html {
     --default-brown: #5e1f13;
     --default-white: #ffefdc;
     --background-yellow: #fac450;
@@ -10,7 +10,7 @@
     background-size: cover;
     background-position-x: center;
     background-attachment: fixed;
-} */
+} 
 
 .page-header {
     display: flex;
@@ -42,10 +42,14 @@
     padding: 20px;
     background-color: var(--default-white);
     border-radius: 25px;
+    width: 45%;
+    height: auto;
 }
 
 .branch-img {
     border-radius: 25px;
+    width: -webkit-fill-available;
+    height: auto;
 }
 
 .branch-name {
@@ -61,6 +65,12 @@
 }
 
 @media (max-width: 800px) {
+    .page-header {
+        height: 75px;
+    }
+    .page-title{
+        font-size: 1.75rem;
+    }
     .branch-container {
         flex-direction: column;
     }
