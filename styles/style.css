@@ -318,7 +318,7 @@ footer h3 {
     }
     .hurgelt-button:hover {
         background-color: #ddd;
-        transition-duration: 10sms;
+        transition-duration: 10ms;
     }
 }
 
