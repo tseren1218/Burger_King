@@ -1,10 +1,11 @@
 import Products from "./Products.js";
 
 var usp = new URLSearchParams(window.location.search);
+const uri = "https://burgerkingmongodb.onrender.com/products";
 
 if (!usp.has("category")) {
     const products = new Products(
-        "https://api.jsonbin.io/v3/b/643c9532ace6f33a220ca072",
+        uri,
         "all"
     );
     products.download("product-container");
@@ -15,7 +16,7 @@ var products;
 switch (usp.get("category")) {
     case "beef":
         products = new Products(
-            "https://api.jsonbin.io/v3/b/643c9532ace6f33a220ca072",
+            uri,
             "beef"
         );
         products.download("product-container");
@@ -23,7 +24,7 @@ switch (usp.get("category")) {
         break;
     case "chicken":
         products = new Products(
-            "https://api.jsonbin.io/v3/b/643c9532ace6f33a220ca072",
+            uri,
             "chicken"
         );
         products.download("product-container");
@@ -31,7 +32,7 @@ switch (usp.get("category")) {
         break;
     case "set":
         products = new Products(
-            "https://api.jsonbin.io/v3/b/643c9532ace6f33a220ca072",
+            uri,
             "set"
         );
         products.download("product-container");
@@ -39,7 +40,7 @@ switch (usp.get("category")) {
         break;
     case "single":
         products = new Products(
-            "https://api.jsonbin.io/v3/b/643c9532ace6f33a220ca072",
+            uri,
             "single"
         );
         products.download("product-container");
@@ -47,7 +48,7 @@ switch (usp.get("category")) {
         break;
     case "hachir":
         products = new Products(
-            "https://api.jsonbin.io/v3/b/643c9532ace6f33a220ca072",
+            uri,
             "hachir"
         );
         products.download("product-container");
@@ -55,7 +56,7 @@ switch (usp.get("category")) {
         break;
     case "merch":
         products = new Products(
-            "https://api.jsonbin.io/v3/b/643c9532ace6f33a220ca072",
+            uri,
             "merch"
         );
         products.download("product-container");

@@ -78,7 +78,7 @@ export default class Products {
         fetch(this._productsUrl)
             .then((products) => {
                 products.json().then((jsob) => {
-                    const filteredProducts = jsob.record.filter(
+                    const filteredProducts = jsob.filter(
                         (productItem) => {
                             if (this._category == "all") return productItem;
                             else if (
