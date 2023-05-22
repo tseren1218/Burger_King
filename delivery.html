@@ -11,7 +11,7 @@
   <script src="https://kit.fontawesome.com/ea59dd7bdf.js" crossorigin="anonymous" defer></script>
   <script src="./modules/FilterByParam.js" type="module"></script>
   <script src="./modules/PopUp.js" type="module"></script>
-  <script src="./modules/onLoadCartNumber.js" defer></script>
+  <script src="./components/CartComponent.js" defer></script>
   <title>Хүргэлт</title>
 </head>
 
@@ -47,7 +47,7 @@
       </ul>
       <a href="./index.html"><img class="logo" src="./images/logo.webp" alt="logo" height="80"></a>
       <ul class="navbar-right-items">
-        <li><a href="./cart.html">Сагс<span class="cart-number" id="cart-number">0</span></a></li>
+        <li><a href="./cart.html"><cart-component></cart-component></a></li>
       </ul>
     </nav>
   </header>
@@ -61,7 +61,7 @@
 
   <div class="page-header">
     <article class="menu-container">
-      <h1 class="page-title">Хүргэлт</h1>
+      <h1 id="page-title">Хүргэлт</h1>
       <card-component mode="menu" id="beef" imgSrc="./images/beefs.webp" name="Үхрийн махтай"></card-component>
       <card-component mode="menu" id="chicken" imgSrc="./images/tahias.webp" name="Тахианы махтай"></card-component>
       <card-component mode="menu" id="set" imgSrc="./images/king_boxs.webp" name="Багц"></card-component>
@@ -69,6 +69,7 @@
         name="Дан бүтээгдэхүүн"></card-component>
       <card-component mode="menu" id="hachir" imgSrc="./images/hachirs.webp" name="Хачир"></card-component>
       <card-component mode="menu" id="merch" imgSrc="./images/merchs.webp" name="Мерчендайз"></card-component>
+
     </article>
   </div>
 

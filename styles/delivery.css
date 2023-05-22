@@ -3,6 +3,7 @@
     width: 100%;
     margin: 130px 0 50px 0;
     padding: 0;
+    padding-bottom: 30px;
     justify-content: center;
     align-items: center;
     background-color: var(--default-brown);
@@ -15,13 +16,14 @@
     grid-template-areas:
         "title title title title title title"
         "menu1 menu2 menu3 menu4 menu5 menu6";
+    
 }
 
 .menu-none {
     display: none;
 }
 
-.page-title {
+#page-title {
     margin-bottom: 0;
     grid-area: title;
     font-size: 3rem;
@@ -52,13 +54,13 @@
     height: 100px;
     width: auto;
 }
-
+/* 
 .grid-item-title {
     margin: 10px;
     padding: 0;
     text-align: center;
     text-decoration: none;
-}
+} */
 
 a:link {
     text-decoration: none;
@@ -66,7 +68,7 @@ a:link {
 
 .grid-item-title {
     color: var(--default-brown);
-    font-size: 1.2rem;
+    font-size: 1.2em;
     font-weight: 600;
 }
 
@@ -80,7 +82,7 @@ a:link {
     justify-content: center;
 }
 
-.delivery-item {
+.card-item {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -89,43 +91,40 @@ a:link {
     border-radius: 25px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     cursor: pointer;
+    flex-wrap: nowrap;
+    min-width:auto;
 }
 
-.delivery-image {
+.card-image {
     object-fit: contain;
     margin: 1em;
 }
 
-.delivery-title {
-    margin-top: 5%;
-    margin-bottom: 0;
-    font-size: 1.6rem;
+/* .card-title {
+    margin: 5%;
+    font-size: 1.3rem;
     font-weight: 700;
     color: var(--default-brown);
-}
+} */
 
-.delivery-calories {
+.card-calories {
     margin: 5%;
     font-weight: 600;
     color: var(--default-brown);
     opacity: 0.5;
 }
 
-.delivery-description {
-    margin: 5%;
+.card-description {
+    margin: 2%;
     font-weight: 600;
     color: var(--default-brown);
     display: none;
 }
 
-.delivery-item img {
-    height: 200px;
-}
-
 hr {
-    margin: 10px 20px;
+    margin: 0px 20px;
     width: auto;
-    border: 1px solid #5e1f13;
+    /* border: 1px solid #5e1f13; */
     opacity: 0.5;
 }
 
@@ -133,7 +132,8 @@ hr {
     margin: 0 0 8px 0;
     color: var(--button-red);
     font-weight: 700;
-    margin-top: 10px;
+    margin-top: 5px;
+    margin-bottom: 0;
 }
 
 .order-button {
@@ -156,14 +156,15 @@ hr {
     background-color: #5e1f13;
     color: var(--default-white);
 }
-@media (max-width: 768px){
+
+@media (max-width: 768px) {
     .menu-container {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 30px;
         grid-template-areas:
-          "title title "
-          "menu1 menu2 "
-          "menu4 menu5";
-      }
+            "title title "
+            "menu1 menu2 "
+            "menu4 menu5";
+    }
 }

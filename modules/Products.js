@@ -13,16 +13,51 @@ class ProductItem {
     }
 
     render(mode) {
-        return `
-            <card-component id="${this.id}" 
-            mode="${mode}"
-            imgSrc="${this.image}" 
-            imgAlt="${this.name}" 
-            name="${this.name}" 
-            calories="${this.calories}"
-            description="${this.description}">
-            </card-component>
-           `;
+        let result;
+        switch (mode) {
+            case "menu":
+                result = `
+                    <card-component id="${this.id}" 
+                    mode="${mode}"
+                    imgSrc="${this.image}"
+                    imgAlt="${this.name}"
+                    name="${this.name}"
+                    theme="${window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"}">
+                    </card-component>
+                `;
+                break;
+            case "menu-item":
+                result = `
+                    <card-component id="${this.id}" 
+                    mode="${mode}"
+                    imgSrc="${this.image}"
+                    imgAlt="${this.name}"
+                    name="${this.name}"
+                    theme="${window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"}">
+                        <p slot="card-calories" class="calories">${this.calories}</p>                        
+                    </card-component>
+                `;
+                break;
+            case "delivery-item":
+                result = `
+                    <card-component id="${this.id}" 
+                    mode="${mode}"
+                    imgSrc="${this.image}"
+                    imgAlt="${this.name}"
+                    name="${this.name}"
+                    theme="${window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"}">
+                        <p slot="card-calories" class="calories">${this.calories}</p> 
+                        <hr slot="card-line">  
+                        <p slot="card-price" class="price">${this.price}</p>  
+                        <p slot="card-button" class="order-button">Сагсанд хийх</p>                   
+                    </card-component>
+                `;
+                break;
+            default:
+                break;
+        }
+        return result;
+     
     }
 
     // <a role="button" id="${this.id}" class="product-item">

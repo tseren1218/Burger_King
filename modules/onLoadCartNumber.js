@@ -1,11 +1,5 @@
-let quantityForSpan = localStorage.getItem("totalQuantity");
-quantityForSpan = parseInt(quantityForSpan);
-document.getElementsByClassName("cart-number")[0].innerHTML = isNaN(quantityForSpan) ? 0 : quantityForSpan;
-
- 
-
-
- 
-    
-
-
+let totalQuantity = 0;
+for (let i = 0; i < localStorage.length; i++) {
+    totalQuantity += parseInt(localStorage.getItem(localStorage.key(i)));
+    document.getElementsByClassName("cart-number")[0].innerHTML = totalQuantity;
+} 

@@ -236,7 +236,8 @@ ul li ul.dropdown li a:visited {
 
 .cart-number{
     padding: 2px 5px;
-    margin: 8px;
+    margin-right: 0px;
+    margin-left: 8px;
     color: var(--default-white);
     background-color: var(--default-brown);
     border-radius: 50%;
