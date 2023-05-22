@@ -20,7 +20,7 @@ switch (usp.get("category")) {
             "beef"
         );
         products.download("product-container");
-        document.getElementById("page-title").textContent = "Үхрийн махтай";
+        document.getElementById("page-title").textContent = "Үхэр";
         break;
     case "chicken":
         products = new Products(
@@ -28,7 +28,7 @@ switch (usp.get("category")) {
             "chicken"
         );
         products.download("product-container");
-        document.getElementById("page-title").textContent = "Тахианы махтай";
+        document.getElementById("page-title").textContent = "Тахиа";
         break;
     case "set":
         products = new Products(
@@ -44,7 +44,7 @@ switch (usp.get("category")) {
             "single"
         );
         products.download("product-container");
-        document.getElementById("page-title").textContent = "Дан бүтээгдэхүүн";
+        document.getElementById("page-title").textContent = "Дан ";
         break;
     case "hachir":
         products = new Products(
