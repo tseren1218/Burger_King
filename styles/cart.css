@@ -14,7 +14,30 @@
     color: var(--default-white);
 }
 
-.cart-container {
+.table-container {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
+
+#cart-table{
+    /* background-color: var(--default-white); */
+    text-align: center;
+    border-color: var(--default-brown);
+    border-radius: 25px;
+    padding: 1%;
+    border-spacing: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    min-width: 60%;
+}
+
+th {
+    border-bottom: 1px solid;
+    border-color: var(--default-brown);
+}
+
+
+
+
+
+

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="styles/terms.css">
     <link rel="stylesheet" href="styles/style.css">
     <script src="https://kit.fontawesome.com/ea59dd7bdf.js" crossorigin="anonymous" defer></script>
-    <script src="./modules/onLoadCartNumber.js" defer></script>
+    <script src="./components/CartComponent.js" defer></script>
 
     <title>Үйлчилгээний нөхцөл</title>
 </head>
@@ -45,7 +45,7 @@
             </ul>
             <a href="./index.html"><img class="logo" src="./images/logo.webp" alt="logo" height="80"></a>
             <ul class="navbar-right-items">
-                <li><a href="./cart.html">Сагс<span class="cart-number">0</span></a></li>
+                <li><a href="./cart.html"><cart-component></cart-component></a></li>
             </ul>
         </nav>
     </header>
@@ -69,7 +69,7 @@
 
         <section class="terms-area">
             <h2 class="terms-title">Хүргэлтийн нөхцөл</h2>
-            
+
             <ul class="terms-list">
                 <li>Хүргэлтийн үнэ 3000₮</li>
                 <li>20000₮-өөс дээш тохиолдолд хүргэлт хийгдэнэ</li>
@@ -109,4 +109,5 @@
         </section>
     </footer>
 </body>
+
 </html>

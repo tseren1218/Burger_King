@@ -1,137 +1,148 @@
-import PopUp from "../modules/PopUp.js"
-
-const menuTemplate = document.createElement("template");
-menuTemplate.innerHTML = `
-                <link rel="stylesheet" href="./styles/menu.css"/>
-                  <a role="button" class="grid-item">
-                        <section>
-                              <img>
-                              <h2 class="grid-item-title"></h2>
-                        </section>
-                  </a>
-`
-
-const menuItemTemplate = document.createElement("template");
-menuItemTemplate.innerHTML = `
-            <link rel="stylesheet" href="./styles/menu.css"/>
-            <article role="button" id="" class="product-item">
-                <div id="item-section">
-                    <img class="product-image" height="200">
-                    <h2 class="product-title"></h2>
-                    <h4 class="product-calories"></h4>
-                    <p class="product-description"></p>
-                </div>
-            </article>
-`;
-
-const deliveryItemTemplate = document.createElement("template");
-deliveryItemTemplate.innerHTML = `
-            <link rel="stylesheet" href="./styles/delivery.css"/>
-            <article class="delivery-item">
-                <div id="item-section">
-                  <img class="card-image" height="200">
-                  <h2 class="delivery-title"></h2>
-                  <h4 class="delivery-calories"></h4>
-                  <hr>
-                  <p class="price"></p>
-                </div>
-                  <a role="button" class="order-button" id="order-button">Сагсанд хийх</a>
-            </article>
-`
+// const template = document.createElement("template");
+// template.innerHTML = 
 
 class CardComponent extends HTMLElement {
 
     constructor() {
         super();
+        this.bgColor = "#ffefdc";
+        this.textColor = "#5e1f13";
+        this.setTheme(this.getAttribute("theme"));
         this.attachShadow({ mode: "open" });
-        switch (this.getAttribute("mode")) {
-            case "menu":
-                this.shadowRoot.appendChild(menuTemplate.content.cloneNode(true));
-                break;
-            case "menu-item":
-                this.shadowRoot.appendChild(menuItemTemplate.content.cloneNode(true));
-                break;
-            case "delivery-item":
-                this.shadowRoot.appendChild(deliveryItemTemplate.content.cloneNode(true));
-                break;
-            default:
-                break;
-        }
+        this.render();
     }
 
     connectedCallback() {
-        if (this.getAttribute("mode") == "menu-item" || this.getAttribute("mode") == "delivery-item") {
-                
-            this.shadowRoot.getElementById("item-section").addEventListener("click", () => {
-            
-            this.insertAdjacentHTML("afterend", `
-            <link id="style" rel="stylesheet" href="./styles/deliveryItemStyle.css">
-            <div class="modal active" id="modal">
-                <div class="modal-body">
-                    <button data-close-button class="close-button" id="close-button">&times;</button>
-                    <img src="${this.getAttribute("imgSrc")}" alt="${this.getAttribute("imgAlt")}"class="product-image" height="200">
-                    <h2 class="product-title">${this.getAttribute("name")}</h2>
-                    <h4 class="product-calories">${this.getAttribute("calories")}</h4> 
-                    <p class="product-description">${this.getAttribute("description")}</p>
-                </div>
-            </div>
-            <div class="active" id="overlay"></div>
-            `
-                );
-                const popUp = new PopUp();
-                popUp.close();
-            }
-            )
-
-            if (document.URL.includes("delivery.html")) {
-
-                var addToCartButton = this.shadowRoot.getElementById("order-button"); 
-
-                addToCartButton.addEventListener("click", () => {
-
-                    let product = {
-                        name: this.getAttribute("name"),
-                        price: this.getAttribute("price"),
-                    }
-
-                    let totalQuantity = localStorage.getItem('totalQuantity');
-                    totalQuantity = parseInt(totalQuantity);
-                    localStorage.setItem("totalQuantity", totalQuantity ? totalQuantity + 1 : 1);
-                    document.getElementsByClassName("cart-number")[0].innerHTML = totalQuantity ? totalQuantity + 1 : 1;
-                })
-
-                
-            }
-
-            
-        }
+        this.setUp();
     }
 
     static get observedAttributes() {
-        return ["id", "imgSrc", "imgAlt", "name", "calories", "description", "price", "mode", "id"];
+        return ["id", "imgSrc", "theme", "imgAlt", "name", "calories", "description", "price", "mode"];
     }
 
     attributeChangedCallback(name, oldValue, newValue) {
-        switch (this.getAttribute("mode")) {
-            case "menu":
-                this.shadowRoot.querySelector("a").id = this.getAttribute("id");
-                this.shadowRoot.querySelector("a section img").src = this.getAttribute("imgSrc");
-                this.shadowRoot.querySelector("a section img").alt = this.getAttribute("name");
-                this.shadowRoot.querySelector("a section h2").innerHTML = this.getAttribute("name");
+        this.shadowRoot.querySelector("article div img").id = this.getAttribute("id");
+        this.shadowRoot.querySelector("article div img").src = this.getAttribute("imgSrc");
+        this.shadowRoot.querySelector("article div img").alt = this.getAttribute("imgAlt");
+        this.shadowRoot.querySelector("article div img").height = this.getAttribute("mode") == "menu" ? 80 : 200;
+        this.shadowRoot.querySelector(".card-title").innerHTML = this.getAttribute("name"); 
+        this.setTheme(this.getAttribute("theme"));
+    }
 
+    setUp() {
+        if (this.getAttribute("mode") != "menu") {
+                
+            this.shadowRoot.getElementById("item-section").addEventListener("click", () => {
+                this.showPopup();
+            });
+
+            if (this.getAttribute("mode") == "delivery-item") {
+                this.setDeliveryCard();
+            }
+        }
+    }
+
+    showPopup() {
+        document.getElementById("product-container").insertAdjacentHTML("afterend", `
+        <link id="style" rel="stylesheet" href="./styles/deliveryItemStyle.css">
+        <div class="modal active" id="modal">
+            <div class="modal-body">
+                <button data-close-button class="close-button" id="close-button">&times;</button>
+                <img src="${this.getAttribute("imgSrc")}" alt="${this.getAttribute("imgAlt")}"class="product-image" height="200">
+                <h2 class="product-title">${this.getAttribute("name")}</h2>
+                <h4 class="product-calories">${this.getAttribute("calories")}</h4> 
+                <p class="product-description">${this.getAttribute("description")}</p>
+            </div>
+        </div>
+        <div class="active" id="overlay"></div>
+        `
+        );
+        const closeModalButton = document.getElementById("close-button")
+        closeModalButton.addEventListener("click", () => {
+            document.getElementById("style").remove();
+            document.getElementById("modal").remove();
+            document.getElementById("overlay").remove();
+        });
+    }
+
+    setDeliveryCard() {
+        
+        var addToCartButton = this.shadowRoot.getElementById("order-button"); 
+
+        addToCartButton.addEventListener("click", () => {
+
+            let product = {
+                name: this.getAttribute("name"),
+                price: this.querySelector(".price").innerHTML,
+                quantity: 1
+            }
+
+            const cart = document.querySelector("cart-component");
+
+            let isFoundInArray = false;
+            for (let i = 0; i < cart.productsList.length; i++) {
+                if (cart.productsList[i].name == product.name) {
+                    isFoundInArray = true;
+                    break;
+                }
+            }
+            
+            !isFoundInArray ? cart.addToCart(product) : window.alert("Бараа сагсанд орсон байна. Тоо ширхэгийг тохируулах бол Сагс цэс рүү орно уу.");
+            
+        })
+    }
+
+    setTheme(theme) {
+        switch (theme) {
+            case "dark":
+                this.bgColor = "#5e1f13";
+                this.textColor = "#ffefdc";
                 break;
-            case "menu-item":
-            case "delivery-item":
-                this.shadowRoot.querySelector("article div img").id = this.getAttribute("id");
-                this.shadowRoot.querySelector("article div img").src = this.getAttribute("imgSrc");
-                this.shadowRoot.querySelector("article div img").alt = this.getAttribute("imgAlt");
-                this.shadowRoot.querySelector("article div h2").innerHTML = this.getAttribute("name");
-                this.shadowRoot.querySelector("article div h4").innerHTML = this.getAttribute("calories");  
+            case "light":
+                this.bgColor = "#ffefdc";
+                this.textColor = "#5e1f13";
                 break;
             default:
                 break;
         }
-    }   
+    }
+
+    render() {
+            this.shadowRoot.innerHTML =
+                        `
+                        <style>
+                            .card-item { 
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                text-align: center;
+                                background-color: ${this.bgColor};
+                                color: ${this.textColor};
+                                border-radius: 25px;
+                                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                                padding: 2%;
+                                cursor: pointer;
+                            }
+                            hr {
+                                color: ${this.textColor};
+                            }
+                            .cart-title {
+                                font-size: 3em;
+                                text-size-adjust: auto;
+                            }
+                        </style>
+                        <article class="card-item">
+                            <div id="item-section">
+                                <img class="card-image">
+                                <h2 class="card-title"></h2>
+                                <slot name="card-calories"></slot>
+                                <slot name="card-line"></slot>
+                                <slot name="card-price"></slot>
+                            </div>
+                            <slot name="card-button" role="button" id="order-button"></slot>
+                        </article>
+            `;
+    }
 }
 
 export default CardComponent;
