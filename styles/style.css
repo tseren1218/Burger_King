@@ -6,6 +6,8 @@ html {
     --responsive-default: #fff2e1;
     --background-yellow: #fac450;
     --button-red: #ff0000;
+    --background-color: #ffefdc;
+    --text-color: #5e1f13;
     background-image: url(../images/bg_image.webp);
     background-repeat: no-repeat;
     background-size: cover;
@@ -374,4 +376,11 @@ footer h3 {
       
       
 
+}
+
+@media (prefers-color-scheme: dark) {
+    html {
+        --background-color: #5e1f13;
+        --text-color: #ffefdc;
+    }
 }

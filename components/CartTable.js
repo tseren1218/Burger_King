@@ -12,6 +12,12 @@ class CartTable extends HTMLElement {
         this.attachShadow({ mode: "open" });
         this.shadowRoot.innerHTML = `
         <link rel="stylesheet" href="./styles/cart.css">
+        <style>
+            #cart-table{
+                background-color: var(--background-color);
+                color: var(--text-color);
+            }
+        </style>
             <table id="cart-table">
                 <thead>
                     <tr>
@@ -30,16 +36,7 @@ class CartTable extends HTMLElement {
 
     connectedCallback() {
         this.readFromLocalStorage();
-        this.setTheme();
     }
-
-    // attributeChangedCallback() {
-    //     this.setTheme();
-    // }
-
-    // static get observedAttributes() {
-    //     return ["theme"];
-    // }
 
     readFromLocalStorage() {
         const productsList = JSON.parse(localStorage.getItem("cart"));
@@ -166,33 +163,6 @@ class CartTable extends HTMLElement {
         localStorage.setItem("cart", JSON.stringify(productsList));
     }
 
-    setTheme() {
-        const isDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
-        switch (isDark) {
-            case true:
-                this.shadowRoot.querySelector("table").style.backgroundColor = "#5e1f13";
-                var cells = this.shadowRoot.querySelectorAll("td");
-                cells.forEach((cell) => {
-                    cell.style.color = "#ffefdc";
-                })
-                var headers = this.shadowRoot.querySelectorAll("th");
-                headers.forEach((header) => {
-                    header.style.color = "#ffefdc";
-                });
-                break;
-            case false:
-                this.shadowRoot.querySelector("table").style.backgroundColor = "#ffefdc";
-                var cells = this.shadowRoot.querySelectorAll("td");
-                cells.forEach((cell) => {
-                    cell.style.color = "#5e1f13";
-                })
-                var headers = this.shadowRoot.querySelectorAll("th");
-                headers.forEach((header) => {
-                    header.style.color = "#5e1f13";
-                });
-                break;
-        }
-    }
 }
 
 window.customElements.define("cart-table", CartTable);

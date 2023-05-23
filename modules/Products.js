@@ -59,12 +59,6 @@ class ProductItem {
         return result;
      
     }
-
-    // <a role="button" id="${this.id}" class="product-item">
-    //               <img class="product-image" src="${this.image}" alt="${this.name}" height="200">
-    //               <h2 class="product-title">${this.name}</h2>
-    //               <h4 class="product-calories">${this.calories}</h4>
-    //         </a>
 }
 
 export default class Products {

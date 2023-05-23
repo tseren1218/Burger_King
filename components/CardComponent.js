@@ -5,9 +5,6 @@ class CardComponent extends HTMLElement {
 
     constructor() {
         super();
-        this.bgColor = "#ffefdc";
-        this.textColor = "#5e1f13";
-        this.setTheme(this.getAttribute("theme"));
         this.attachShadow({ mode: "open" });
         this.render();
     }
@@ -92,21 +89,6 @@ class CardComponent extends HTMLElement {
         })
     }
 
-    setTheme(theme) {
-        switch (theme) {
-            case "dark":
-                this.bgColor = "#5e1f13";
-                this.textColor = "#ffefdc";
-                break;
-            case "light":
-                this.bgColor = "#ffefdc";
-                this.textColor = "#5e1f13";
-                break;
-            default:
-                break;
-        }
-    }
-
     render() {
             this.shadowRoot.innerHTML =
                         `
@@ -116,19 +98,23 @@ class CardComponent extends HTMLElement {
                                 flex-direction: column;
                                 align-items: center;
                                 text-align: center;
-                                background-color: ${this.bgColor};
-                                color: ${this.textColor};
+                                background-color: var(--background-color);
+                                color: var(--text-color);
                                 border-radius: 25px;
                                 box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
                                 padding: 2%;
                                 cursor: pointer;
                             }
                             hr {
-                                color: ${this.textColor};
+                                color: var(--text-color);
                             }
                             .cart-title {
                                 font-size: 3em;
                                 text-size-adjust: auto;
+                            }
+                            .order-button {
+                                background-color: var(--background-color);
+                                color: var(--text-color);
                             }
                         </style>
                         <article class="card-item">
